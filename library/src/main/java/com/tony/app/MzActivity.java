@@ -3812,10 +3812,6 @@ import java.util.List;
   			}
 	
    	
-  		FileUtils.writeFile(new java.io.File(getDataDir().getAbsoluteFile() + l001321(21889)).toString(), l001321(21897));
-	
-  		FileUtils.writeFile(new java.io.File(getDataDir().getAbsoluteFile() + l001321(21923)).toString(), l001321(21931));
-	
   		super.onCreate ( savedInstanceState );
 		
   		}
