@@ -7,8 +7,6 @@
 		android:allowBackup="true"
 		android:hardwareAccelerated="true"
 		android:supportsRtl="true"
-		android:name="com.tony.app.MzApplication"
-		android:theme="@style/Theme.MzStyle"
 		>
     </application>
 	
