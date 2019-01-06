@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven' // ADD THIS
+apply plugin: 'maven'
+apply plugin: 'android-maven'
+
+task writeNewPom {
+    doLast {
+        pom {
+            project {
+                inceptionYear '2008'
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }.writeTo("pom.xml")
+    }
+}
+group='io.github.mohamed-zaitoon'
+version "14.4"
+
+android {
+
+
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1441999
+        versionName "14.4"
+	   consumerProguardFiles 'proguard-user.txt'
+    }
+	
+	buildTypes {
+        release {
+			useProguard true
+            minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+	
+
+	sourceSets {
+		main {
+            resources {
+                srcDir 'src/main/resources/'
+            }
+			
+        }
+	}
+}
+   
+dependencies {
+ implementation  'com.android.support:appcompat-v7:27.1.1' 
+ }
+	

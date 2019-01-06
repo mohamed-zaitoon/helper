@@ -1,0 +1,36 @@
+<resources>
+	<string name ="app_name">MzLibs-V7</string>
+	<declare-styleable name="MzActionBar">
+		<attr format="reference|boolean" name="isMzTheme"/>
+		</declare-styleable>
+	<style name="Base.Theme.MzStyle" parent="@style/Base.Theme.AppCompat">
+		<item name="isMzTheme">true</item>
+		</style>
+	<style name="Base.Theme.MzStyle.Light" parent="@style/Base.Theme.AppCompat.Light">
+		<item name="isMzTheme">true</item>
+	</style>
+	<style name="Base.Theme.MzStyle.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light.DarkActionBar">
+		<item name="isMzTheme">true</item>
+	</style>
+	<style name="Theme.MzStyle" parent="@style/Base.Theme.MzStyle">
+		</style>
+	<style name ="Theme.MzStyle.Light" parent="@style/Base.Theme.MzStyle.Light"></style>
+	<style name ="Theme.MzStyle.Light.DarkActionBar" parent="@style/Base.Theme.MzStyle.Light.DarkActionBar"></style>
+	
+	<style name="Theme.MzStyle.Light.NoActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+	<style name="Theme.MzStyle.NoActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+	<style name="Theme.MzStyle.Light.NoActionBar.Fullscreen">
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+	<style name="Theme.MzStyle.NoActionBar.Fullscreen">
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+</resources>

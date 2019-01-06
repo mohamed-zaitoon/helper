@@ -1,37 +1,99 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/mohamed-zaitoon/mzlibs-v7/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# mzlibs
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs-v7.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs-v7)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+An Android library that provides most of used in one Class.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Download
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```java
+android {
+    /* Android Gradle Plugin 3.0.0+ is required to support Java 8 desugaring */
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+dependencies {
+     implementation 'com.android.support:appcompat-v7:27.1.1' 
+     implementation 'io.github.mohamed-zaitoon:mzlibs-v7:2.6.9'
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Quick Tutorial
 
-### Jekyll Themes
+If you want to make timer or show toast you need to add most of code in your class.
+or you can make `MainActivity` class, extends  `MzActivity` class:
+```java
+package com.example.app;
+   
+   import com.tony.app.MzActivity;
+   
+   import com.tony.annotation.OnCreate;
+   
+   import android.os.Bundle.
+   
+   public class MainActivity extends MzActivity implements TimerInterface {
+   
+       @Override
+       @OnCreate
+       portected void onCreate(Bundle bundle){
+          super.onCreate(bundle);
+          setTimer(6000);
+           
+       }
+       
+   // you must add this
+   @Override 
+   public void startTimer {
+      super.startTimer();
+      showMessage("Hello Man"); // this Toast message will be show after minute 
+   }
+   }
+ ``` 
+ In this file res/values/styles.xml your theme best be this:
+```xml
+<resources>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mohamed-zaitoon/mzlibs-v7/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+	<!-- MzStyle is parent of theme AppCompat -->
+    <!-- if you wont use this theme your app will be crash -->
+    
+   <style name= "AppTheme_Dark" parent= "@style/Theme.MzStyle">
+   </style>
+   
+   <style name= "AppTheme_NoActionBar" parent= "@style/Theme.MzStyle.NoActionBar">
+   </style>
+   
+   <style name= "AppTheme_NoActionBar_Fullscreen" parent= "@style/Theme.MzStyle.NoActionBar.Fullscreen">
+   </style>
+   
+   <style name= "AppTheme_Light" parent= "@style/Theme.MzStyle.Light">
+   </style>
+   
+   <style name= "AppTheme_Light_DarkActionBar" parent= "@style/Theme.MzStyle.Light.DarkActionBar">
+   </style>
+   
+	<style name= "AppTheme_Light_NoActionBar" parent= "@style/Theme.MzStyle.Light.NoActionBar">
+   </style>
+   
+	<style name= "AppTheme_Light_NoActionBar_Fullscreen" parent= "@style/Theme.MzStyle.Light.NoActionBar.Fullscreen">
+   </style>
+ </resources>
+ ```
+ In progaurd-rules.pro add this lines:
+ ```txt
+-keepclassmembers class com.tony.** {*; }
+-keep public class com.tony.** { *;}
+-keepclassmembers interface com.tony.** {*;}
+-keep public interface com.tony.** {*;}
+```
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+ 
+ 
