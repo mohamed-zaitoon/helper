@@ -2,7 +2,7 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs-v7.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs-v7)
+[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs)
 
 
 An Android library that provides most of used in one Class.
@@ -23,7 +23,7 @@ repositories {
 }
 dependencies {
      implementation 'com.android.support:appcompat-v7:27.1.1' 
-     implementation 'io.github.mohamed-zaitoon:mzlibs:2.6.9'
+     implementation 'io.github.mohamed-zaitoon:mzlibs:2.7.1'
 }
 ```
 

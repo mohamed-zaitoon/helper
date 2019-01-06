@@ -1,6 +1,6 @@
 -printmapping out.map
 -keepparameternames
--renamesourcefileattribute MzLibs
+-renamesourcefileattribute TonySrc
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
                 SourceFile,LineNumberTable,EnclosingMethod
 
