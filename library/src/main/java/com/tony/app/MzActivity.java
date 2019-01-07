@@ -198,7 +198,13 @@ import java.util.List;
   		
   		}
 		
+		public final void activateBluetooth() {
+
+			Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
 		
+startActivity(intent);
+		
+}
   	public final boolean isConnected() {
 			
   		try {

@@ -22,8 +22,9 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-     implementation 'com.android.support:appcompat-v7:27.1.1' 
-     implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.1'
+ implementation 'com.android.support:appcompat-v7:27.0.2'
+	
+     implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.3'
 }
 ```
 
