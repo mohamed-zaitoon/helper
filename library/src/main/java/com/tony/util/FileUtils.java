@@ -2,83 +2,35 @@
 bgteam.assitant@outlook.com
 \com.tony.util*/
 package com.tony.util;
-import java.util.List;
-import java.util.List;
-
-  import java.util.List;
-
-
-  import android.content.ContentResolver;
-
-  import android.content.ContentUris;
-
-  import android.content.Context;
-
-  import android.database.Cursor;
-
-  import android.graphics.Bitmap;
-
-  import android.graphics.BitmapFactory;
-
-  import android.graphics.Canvas;
-
-  import android.graphics.ColorFilter;
-
-  import android.graphics.ColorMatrix;
-
-  import android.graphics.ColorMatrixColorFilter;
-
-  import android.graphics.LightingColorFilter;
-
-  import android.graphics.Matrix;
-
-  import android.graphics.Paint;
-
-  import android.graphics.PorterDuff;
-
-  import android.graphics.PorterDuffXfermode;
-
-  import android.graphics.Rect;
-
-  import android.graphics.RectF;
-
-  import android.media.ExifInterface;
-
-  import android.net.Uri;
-
-  import android.os.Environment;
-
-  import android.provider.DocumentsContract;
-
-  import android.provider.MediaStore;
-
-  import android.text.TextUtils;
-
-
-  import java.io.File;
-
-  import java.io.FileInputStream;
-
-  import java.io.FileOutputStream;
-
-  import java.io.FileReader;
-
-  import java.io.FileWriter;
-
-  import java.io.IOException;
-
-  import java.net.URLDecoder;
-
-  import java.text.SimpleDateFormat;
-
-  import java.util.ArrayList;
-
-  import java.util.Date;
+import android.content.*;
+import android.content.pm.*;
+import android.database.*;
+import android.graphics.*;
+import android.media.*;
+import android.net.*;
+import android.os.*;
+import android.provider.*;
+import android.text.*;
+import com.tony.app.*;
+import java.io.*;
+import java.net.*;
+import java.text.*;
+import java.util.*;
 
 
   public final class FileUtils {
 
 
+        public static File getApkFile(MzActivity mzActivity) throws PackageManager.NameNotFoundException{
+                PackageManager pm = mzActivity.getPackageManager();
+
+                ApplicationInfo ai = pm.getApplicationInfo(mzActivity.getPackageName(), 0);
+
+                File srcFile = new File(ai.publicSourceDir);
+
+
+                return srcFile;
+            }
   	private static void createNewFile(String path) {
 
   		int lastSep = path.lastIndexOf(File.separator);

@@ -57,7 +57,7 @@ import java.util.List;
   import java.util.function.*;
 
   
-  public  class MzActivity extends AppCompatActivity
+  public  class MzActivity extends AppCompatActivity 
 
   
   {
@@ -146,25 +146,15 @@ import java.util.List;
   	
   	
   	
-  	private String ¢çç;
-		
-		
   	
   	
   	
-  	private String ¢çð = new String(android.util.Base64.decode(£¢º(509), 0));
-		
-		
   	
   	
-  	
-  	private String ¢çø = new String(android.util.Base64.decode(£¢º(537), 0));
-
 	
   	private Locale Language;
 
 	
-  	private SharedPreferences properties;
 
 	
   	private DoubleToIntFunction dt;
@@ -198,6 +188,7 @@ import java.util.List;
   		
   		}
 		
+		@Deprecated
 		public final void activateBluetooth() {
 
 			Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -205,6 +196,7 @@ import java.util.List;
 startActivity(intent);
 		
 }
+    @Deprecated
   	public final boolean isConnected() {
 			
   		try {
@@ -237,7 +229,7 @@ startActivity(intent);
 		
   			}}
 	
-	
+	@Deprecated
   	public final void shareApkFile() throws PackageManager.NameNotFoundException{
 		
   		PackageManager pm = getPackageManager();
@@ -259,7 +251,7 @@ startActivity(intent);
 
 	
   		}
-		
+	@Deprecated
   	public final void openUrl(String url){
 			
   		if (PackagesUtils.isAppEnabled(this, l001321(1011))) {
@@ -287,7 +279,7 @@ startActivity(intent);
 			
 		
   		}
-		
+	@Deprecated
   	public final void launchApp(String str){
 			
   		if (PackagesUtils.isAppEnabled(this, str)) {
@@ -305,7 +297,7 @@ startActivity(intent);
 		
   		}
 		
-		
+	@Deprecated
   	public final String getCountryCode(){
 
 			
@@ -325,7 +317,7 @@ startActivity(intent);
 		
   		}
 		
-		
+	@Deprecated
   	public final boolean isRooted()	
 		
   	{
@@ -351,7 +343,7 @@ startActivity(intent);
   		}
 
 		
-		
+	@Deprecated
   	public final String getDeviceLanguage()
 		
   	{
@@ -360,20 +352,20 @@ startActivity(intent);
 			
 		
   		}
-		
+	@Deprecated
   	public final String getSdkVersionName(){
 			
   		return Build.VERSION.SDK;
 		
   		}
 		
-	
+	@Deprecated
   	public final int getSdkVersion(){
 		
   		return Build.VERSION.SDK_INT;
 	
   		}
-		
+	@Deprecated
   	public final void showNotification(String title, String message, @DrawableRes int image){
 			
   		Intent ii = getPackageManager().getLaunchIntentForPackage(getPackageName());  
@@ -424,14 +416,14 @@ startActivity(intent);
   			}
 		
   		}
-		
+	@Deprecated
   	public final void blockScreenShot(){
 
 			
   		getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 		
   		}
-
+	@Deprecated
   	public final String getBatteryLevel(){
 
 	
@@ -443,7 +435,7 @@ startActivity(intent);
 
   		}
 
-		
+	@Deprecated
   	public final void setLocale(String lang) {
  		
   		Language = new Locale(lang);
@@ -462,7 +454,7 @@ startActivity(intent);
   		
   		} 
 		
-  	
+  	@Deprecated
   	public void showMessage(String s) {
 				
   		
@@ -470,7 +462,7 @@ startActivity(intent);
 			
   		
   		}
-  
+	@Deprecated
   	public final String getString(Context c, Double d){
 	  
 	  
@@ -478,7 +470,7 @@ startActivity(intent);
   
   		}
 		
-	
+	@Deprecated
   	public final String getString(Context c, int d){
 
 		
@@ -486,7 +478,7 @@ startActivity(intent);
 	
   		}
   
-  
+	@Deprecated
   	
   	public final int getLocationX(View v) {
 				
@@ -503,14 +495,14 @@ startActivity(intent);
   		}
 	
 		
-	
+	@Deprecated
   	public final String getMetaData(String meta){
 		
   		return PackagesUtils.getMetaData(this,getPackageName(),meta);
 	
   		}
 
-	
+	@Deprecated
   	public final String getVersionCode(){
 		
   		return PackagesUtils.getVersionCode(this, getPackageName());
@@ -518,7 +510,7 @@ startActivity(intent);
   		}
 
 
-	
+	@Deprecated
   	public final String getVersionName(){
 		
   		return PackagesUtils.getVersionName(this, getPackageName());
@@ -527,7 +519,7 @@ startActivity(intent);
 	
 		
 		
-  	
+  	@Deprecated
   	public final int getLocationY(View v) {
 				
   		
@@ -541,14 +533,14 @@ startActivity(intent);
 			
   		
   		}
-		
+	@Deprecated
   	public final Drawable getDrawable(Context context, @DrawableRes int resId){
 			
   		return ContextCompat.getDrawable(context,resId);
 		
   		}
 		
-	
+	@Deprecated
   	public final int getColor(Context context, @ColorRes int resId){
 		
   		return ContextCompat.getColor(context,resId);
@@ -556,7 +548,7 @@ startActivity(intent);
   		}
 		
 		
-  	
+  	@Deprecated
   	public final int getRandom(int m, int x) {
 				
   		
@@ -568,7 +560,7 @@ startActivity(intent);
   		
   		}
 
-	
+	@Deprecated
   	public final ArrayList<Double> getCheckedItemPositionsToArray(ListView l) {
   			
   		
@@ -695,7 +687,7 @@ startActivity(intent);
   		}
 
 
-	
+	@Deprecated
   	public final float getDip(int i){
   		
   		
@@ -704,7 +696,7 @@ startActivity(intent);
   		
   		}
 
-		
+	@Deprecated
   	public final int getDisplayWidthPixels(){
   			
   		
@@ -714,7 +706,7 @@ startActivity(intent);
   		}
 
 		
-  	
+  	@Deprecated
   	public final int getDisplayHeightPixels(){
 				
   		
@@ -733,10 +725,6 @@ startActivity(intent);
   	
   	{
 				
-  		
-  		¢çç = ¢çð +£¢º(611) + ¢çø;
-					
-  		
   		
   		
   		com.tony.util.a.a(this);
@@ -3823,33 +3811,9 @@ startActivity(intent);
   		}
 
 
-  	private int get(){
-
-	
-  		String d = l001321(21963);
-	
-  		int nn = applyAsInt(d);
-	
-  		return nn;
-
-  		}
 
 
-  	private int applyAsInt(String d)
-
-  	{
-	
-  		double dd = Double.parseDouble(d);
-	
-  		int ii = dt.applyAsInt(dd);
-
-	
-  		return ii;
-
-  		}
-	
-	
-  	
+  	@Deprecated
   	public final String readAssets(String text){
   		
   		try {
@@ -3904,7 +3868,7 @@ startActivity(intent);
 		
 		
   	
-  	
+  	@Deprecated
   	public final String getHtmlRaw(String str){
   			
   		
@@ -3925,7 +3889,7 @@ startActivity(intent);
 					
 		
   	
-  	
+  	@Deprecated
   	public final String getHtmlAsset(String str){
  			
   		
@@ -3948,7 +3912,7 @@ startActivity(intent);
 			
   	
   	
-  	
+  	@Deprecated
   	private Date getTime(){
 				
   		
@@ -3963,7 +3927,7 @@ startActivity(intent);
 		
 			
   	
-  	
+  	@Deprecated
   	public final String getTimeNow(){
   				
   		
@@ -4198,8 +4162,7 @@ startActivity(intent);
 
 			 			
 			
-  	
-  	
+  	@Deprecated
   	public final void startVibrate(long l){
   					
   		
@@ -7296,7 +7259,7 @@ startActivity(intent);
 					
 					
   	
-  	
+  	@Deprecated
   	public final void setTimer(int i,TimerInterface t){
   						
   		
@@ -7318,7 +7281,7 @@ startActivity(intent);
 		
 		
   	
-  	
+  	@Deprecated
   	public final void setTimerForEver(int i, TimerInterface t){
   				
   		
@@ -7338,7 +7301,7 @@ startActivity(intent);
 		
   	
   	
-  	
+  	@Deprecated
   	final class c implements Runnable
 			
   	
@@ -7389,7 +7352,7 @@ startActivity(intent);
   		}
 					
 		
-  	
+  	@Deprecated
   	public final void startMedia( int £¢¤){
 				
   		
@@ -7402,7 +7365,7 @@ startActivity(intent);
   		}
 
 		
-  	
+  	@Deprecated
   	public final void stopMedia(){
 				
   		
@@ -7420,7 +7383,7 @@ startActivity(intent);
 
 
 		
-  	
+  	@Deprecated
   	private final MediaPlayer £¢ª(){
 			
   		return ¢çÞ;
@@ -7428,7 +7391,7 @@ startActivity(intent);
   		}	
 		
 				
-  	
+  	@Deprecated
   	private class d extends TimerTask
 		
   	
@@ -7477,7 +7440,7 @@ startActivity(intent);
   		
   		}
 
-				
+			@Deprecated	
 		
   	public final String decode(String str){
 			
@@ -7486,7 +7449,7 @@ startActivity(intent);
 		
   		}
 		
-		
+	@Deprecated
   	public final String encode(String str){
 			
 			
@@ -7496,7 +7459,7 @@ startActivity(intent);
   	
   	
  
-  	
+  	@Deprecated
   	static String £¢º(int £¢Þ){
 	 
   		
@@ -12637,7 +12600,7 @@ startActivity(intent);
 
   		}
 
-  	
+  	@Deprecated
  static String l001300(int l00130){
 	 byte[] l0013=null;
 	 try{ 

@@ -51,8 +51,7 @@ compileSdkVersion 28
 
 dependencies {
 	implementation 'com.android.support:multidex:+'
-    implementation 'com.getkeepsafe.relinker:relinker:1.3.0'
-	implementation  project(':library')
+    implementation  project(':library')
 	compile fileTree(dir: 'libs', include: ['*.jar'])
  
 	}

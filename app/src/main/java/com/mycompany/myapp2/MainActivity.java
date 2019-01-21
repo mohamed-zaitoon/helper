@@ -17,7 +17,6 @@ import android.content.pm.*;
 import android.webkit.*;
 import com.tony.interfaces.*;
 import android.support.v4.text.*;
-import com.getkeepsafe.relinker.*;
 import java.lang.annotation.*;
 import android.app.*;
 
@@ -32,13 +31,6 @@ import android.app.*;
 
 	private static String str;
 
-	private static String stringFromJNI2()
-	{
-		// TODO: Implement this method
-		return str;
-	}
-	@Native
-	private native String stringFromJNI();
 	
   	@Override
   	protected void onCreate(Bundle savedInstanceState)
@@ -47,9 +39,46 @@ import android.app.*;
 	  
   		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		loadLibrary("hello-jni");
-		getTextView(R.id.mainTextView).setText(FileUtils.readFile(new File(getExternalFilesDir("Test App").toString()).toString() + "/my.txt"));
-		getTextView2(R.id.mainTextView2).setText(stringFromJNI());
+        
+        tv = findViewById(R.id.mainTextView);
+        MzUtils.setTimer(this, 450, this);
+      //  MzUtils.startVibrate(this, 1000);
+      //  tv.setText(MzUtils.getDeviceLanguage());
+       /* if(MzUtils.isRooted()){
+            tv.setText("Rooted");
+        }*/
+        //tv.setText(MzUtils.getCountryCode(this));
+        
+        //MzUtils.launchApp(this, "com.android.vending");
+       // MzUtils.openUrl(this, "goo.gle");
+        
+  /*      try {
+        Intent share = new Intent();
+
+        share.setAction(Intent.ACTION_SEND);
+
+        share.setType("application/vnd.android.package-archive");
+
+        share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(FileUtils.getApkFile(this)));
+
+        startActivity(Intent.createChooser(share, getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
+     }
+     catch (PackageManager.NameNotFoundException pm){
+            
+        }*/
+        //MzUtils.activateBluetooth(this);
+      /*  
+        if(MzUtils.isConnected(this)){
+            showMessage("isConntected ,, true");
+        } else {
+            
+                showMessage("isConntected ,, false");
+        }
+        
+        */
+        
+        /*
+        @Deprecated all this: 
 		setTimer(6000,this);
 		blockScreenShot(); // To block ScreenShots
 		/* If You using webview and load html file from asset or raw you can use this code:
@@ -60,12 +89,12 @@ import android.app.*;
 		 * or
 		 * WebView mWeb = findViewById(R.id.mWeb);
 		 * mWeb.loadUrl(assetUrl);
-		 */
+		 *
 
 		setLocale("en-US"); //force English in app 
 		/* If You want to make button or menu item to share apk file you can use this code:
 		 * shareApkFile();
-		 */
+		 *
 		 
 		 double ran = getRandom(1, 23); // ran will be random from 1 : 23
 		 this.random = ran;
@@ -75,7 +104,7 @@ import android.app.*;
 		 * or
 		 * TextView tv = findViewById(R.id.tv);
 		 * tv.setText(txt);
-		 */
+		 *
 		 if(isConnected()){
 			 Log.e("Device:", "is connected");
 		 } else if(!isConnected()){
@@ -101,19 +130,14 @@ import android.app.*;
 		  * int color = getColor(this, R.color.m_color);
 		  * String version_name = getVersionName();
 		  * String version_code = getVersionCode();
-		  */
-		  startVibrate(1/*must be >= 1*/); // To make vibration need to 
+		  
+		  startVibrate(must be >= ); // To make vibration need to 
 		
 		//throw new IllegalAccessError();
 		
 
 	}
 
-	private void loadLibrary(String p0)
-	{
-		ReLinker.loadLibrary(this,p0);
-		// TODO: Implement this method
-	}
 
 	private TextView getTextView2(int mainTextView2)
 	{
@@ -127,12 +151,14 @@ import android.app.*;
 		// TODO: Implement this method
 		return (TextView) findViewById(R.id.mainTextView);
 	}
+*/
 
+}
 	@Override
 	public void startTimer()
 	{
 		//openUrl("https://mohamed-zaitoon.github.io");
-		showMessage(encode("Hello")); // Toast with base64 text from this 
+		MzUtils.showMessage(this,MzUtils.encode("Hello")); // Toast with base64 text from this 
 		
 		//launchApp("com.barmej.android");
 		}

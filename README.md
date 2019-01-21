@@ -24,7 +24,7 @@ repositories {
 dependencies {
  implementation 'com.android.support:appcompat-v7:27.0.2'
 	
-     implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.3'
+     implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.4'
 }
 ```
 
@@ -37,25 +37,26 @@ package com.example.app;
    
    import com.tony.app.MzActivity;
    
-   import com.tony.annotation.OnCreate;
    
    import android.os.Bundle.
+   
+   import com.tony.util.*;
+   
+   import com.tony.interfaces.*;
    
    public class MainActivity extends MzActivity implements TimerInterface {
    
        @Override
-       @OnCreate
        portected void onCreate(Bundle bundle){
           super.onCreate(bundle);
-          setTimer(6000);
+          MzUtils.setTimer(this,6000,this);
            
        }
        
    // you must add this
    @Override 
    public void startTimer {
-      super.startTimer();
-      showMessage("Hello Man"); // this Toast message will be show after minute 
+      MzUtils.showMessage(this,"Hello Man"); // this Toast message will be show after minute 
    }
    }
  ``` 
