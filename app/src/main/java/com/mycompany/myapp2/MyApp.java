@@ -33,7 +33,7 @@ static int[] l001413=null;
   		
 				
   		super.onCreate ( );
-		MzUtils.install(this);
+		//MzUtils.install(this);
   		}
 	
 
