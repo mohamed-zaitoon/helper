@@ -23,8 +23,6 @@ import java.util.List;
   //import android.content.*;
   import android.content.*;
 
-  //import com.tony.app.*;
-  import com.tony.app.*;
 
   //import android.content.pm.*;
   import android.content.pm.*;

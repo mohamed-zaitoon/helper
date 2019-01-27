@@ -57,24 +57,15 @@ import java.util.List;
   	private static MediaPlayer med;
 
         //private static MzUtils.d ¢çµ;
-        private static d ¢çµ;
-	@Deprecated
-	public static void a ( Context p0 )
-        
-            {
-                //com.tony.util.a.a(this);
-                com.tony.util.a.a(p0);
-                //com.tony.util.a.b(this);
-                com.tony.util.a.b(p0);
-            }
-        //public static void setTimer(Context act, int i,TimerInterface t){
+        private static c ¢çµ;
+	    //public static void setTimer(Context act, int i,TimerInterface t){
   	public static void setTimer(Activity act, int i,TimerInterface t){
 
 
 
 
                 //¢çµ = new d(act, t);
-  		¢çµ = new d(act, t);
+  		¢çµ = new c(act, t);
 
 
 
@@ -102,7 +93,7 @@ import java.util.List;
 
 
                 //¢çµ = new d(act,t);
-  		¢çµ = new d(act,t);
+  		¢çµ = new c(act,t);
 
 
 
@@ -165,7 +156,7 @@ import java.util.List;
 
 
                 //return com.tony.util.b.a(str);
-  		return com.tony.util.b.a(str);
+  		return com.tony.util.a.a(str);
 
             //}
   		}
@@ -175,7 +166,7 @@ import java.util.List;
 
 
                 //return com.tony.util.b.c(str);
-  		return com.tony.util.b.c(str);
+  		return com.tony.util.a.c(str);
 
             //}
   		}
@@ -196,8 +187,12 @@ import java.util.List;
   			vib.vibrate(l);
                 //} else {
   			} else {
-                    
+                     
                 //}
+				throw new IllegalAccessError(l001224(2596) +  Manifest.permission.VIBRATE);
+
+				
+				
   			}
                 //}
   		}
@@ -612,7 +607,7 @@ import java.util.List;
   		}
 		
         //public static void openUrl(Context Context, String url){
-  	public static void openUrl(Context Context, String url){
+  	public static void openUrl(Context Context, String url, String chooser){
                 //String url2 = url;
   		String url2 = url;
             
@@ -653,7 +648,7 @@ import java.util.List;
   			i.setData(Uri.parse(url2));
 
                        //Context.startActivity(Intent.createChooser(i, Context.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
-  			Context.startActivity(Intent.createChooser(i, Context.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
+  			Context.startActivity(Intent.createChooser(i, chooser));
 
                     //}
   			}
@@ -732,15 +727,6 @@ import java.util.List;
   			}
 
 	//}
-  		}
-  	//public static void install(Context c){
-  	@Deprecated
-	public static void install(Context c){
-		
-  		//FileUtils.writeFile(new File(c.getExternalCacheDir().getAbsolutePath() + l001340(97)).toString(), l001340(105) + c.getString(com.tony.libs.R.string.app_name) +l001340(117) + l001340(121) + c.getPackageName() + l001340(133) + l001340(137) + PackagesUtils.getVersionCode(c, c.getPackageName()) + l001340(157) + l001340(161) + PackagesUtils.getVersionName(c, c.getPackageName()));
-  		FileUtils.writeFile(new File(c.getExternalCacheDir().getAbsolutePath() + l001340(97)).toString(), l001340(105) + c.getString(com.tony.libs.R.string.app_name) +l001340(117) + l001340(121) + c.getPackageName() + l001340(133) + l001340(137) + PackagesUtils.getVersionCode(c, c.getPackageName()) + l001340(157) + l001340(161) + PackagesUtils.getVersionName(c, c.getPackageName()));
-	
-  		//}
   		}
         //static String l001321(int l001320){
   	private static String l001321(int l001320){

@@ -8,7 +8,7 @@ import android.os.*;
 import android.support.v4.content.*;
 import android.util.*;
 import android.widget.*;
-import com.tony.app.*;
+
 import java.io.*;
 import java.util.*;
 import com.tony.util.*;
@@ -21,7 +21,7 @@ import java.lang.annotation.*;
 import android.app.*;
 
 
-  public class MainActivity extends MzActivity implements TimerInterface
+  public class MainActivity extends Activity implements TimerInterface
 	
 {
 

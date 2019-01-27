@@ -1,26 +1,33 @@
 package com.tony.util;
 
-final class c implements Runnable
+import com.tony.interfaces.*;
+import java.util.*;
+import android.app.*;
 
-
+final class c extends TimerTask
 
 
 //{
     {
 
 
-        //private com.tony.interfaces.TimerInterface timer;
-        private com.tony.interfaces.TimerInterface timer;
+        //private TimerInterface timer;
+        private TimerInterface timer;
 
-        //public c(com.tony.interfaces.TimerInterface t){
-        public c(com.tony.interfaces.TimerInterface t){
+        //private MzActivity act;
+        private Activity act;
+
+
+        //public d(MzActivity mAct, TimerInterface t){
+        public c(Activity mAct, TimerInterface t){
 
                 //this.timer = t;
                 this.timer = t;
+                //this.act = mAct;
+                this.act = mAct;
 
                 //}
             }
-
 
 
 
@@ -42,15 +49,16 @@ final class c implements Runnable
 
 
 
-                //timer.startTimer();
-                timer.startTimer();
+
+                //act.runOnUiThread(new c(timer));
+                act.runOnUiThread(new b(timer));
+
 
 
 
 
                 //}
             }
-
 
 
 

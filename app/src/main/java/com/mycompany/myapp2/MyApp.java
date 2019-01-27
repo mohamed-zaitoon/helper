@@ -5,7 +5,6 @@ package com.mycompany.myapp2;
 import java.util.List;
 import java.util.List;
 
-  import com.tony.app.*;
 import android.app.*;
 import android.support.multidex.*;
 import com.tony.util.*;
@@ -33,8 +32,7 @@ static int[] l001413=null;
   		
 				
   		super.onCreate ( );
-		//MzUtils.install(this);
-  		}
+		}
 	
 
   	}

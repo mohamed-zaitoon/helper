@@ -21,8 +21,6 @@ import java.util.List;
   import android.provider.*;
 //import android.text.*;
   import android.text.*;
-//import com.tony.app.*;
-  import com.tony.app.*;
 //import java.io.*;
   import java.io.*;
 //import java.net.*;

@@ -1,4 +1,4 @@
-  /* Orginal file: a.java
+  /* Orginal file: b.java
 bgteam.assitant@outlook.com
 \com.tony.util*/
 package com.tony.util;
@@ -11,108 +11,209 @@ import java.util.List;
   //import java.util.List;
   import java.util.List;
 
-  //import java.util.List;
-  import java.util.List;
-  
-  //import java.util.List;
-  import java.util.List;
-  
-  
-  //import android.content.*;
-  import android.content.*;
-  
-  //import android.util.*;
-  import android.util.*;
-  
-  //import com.tony.libs.*;
-  import com.tony.libs.*;
 
-  
-  //public final class a
-  @Deprecated
+  //public final class b
   final class a
 
-  
-    //{
+  //{
   {
 
-        //public static void b ( Context baseContext )
-  	public static void b ( Context baseContext )
-            //{
-  	{
-                //
-  		
-        if (!FileUtils.isExistFile(l001244(122) + baseContext.getPackageName() + l001244(134))){
-            throw new IllegalStateException(l001244(145));
-                //}
-  			}
-            //}
-  		}
-
+	
+  	//private static String st;
+  	private static String st;
 
 	
-  	//public static void a ( Context mContext )
-  	public static void a ( Context mContext )
+  	//private static String ste;
+  	private static String ste;
+	
+  	//public static String a(String str){
+  	public static String a(String str){
+		
+		
+  		//return b(str);
+  		return b(str);
+	
+  		//}
+  		}
+
+	
+  	//private static String b(String str)
+  	private static String b(String str)
 	
   	//{
   	{
-		   
 		
-  		//if (!mContext.getTheme().resolveAttribute(R.attr.isMzTheme, new TypedValue(), true)) {
-  		if (!mContext.getTheme().resolveAttribute(R.attr.isMzTheme, new TypedValue(), true)) {
-			
-  			//throw new IllegalStateException(notTheme(151));
-  			throw new IllegalStateException(notTheme(151));
-  				
-  			
+  		//ste = l001422(80);
+  		ste = l001422(80);
+		
+  		//try {
+  		try {
+            
+  			//ste = new String(android.util.Base64.decode(str, 0));
+  			ste = new String(android.util.Base64.decode(str, 0));
+        
+  			//} catch (Exception e) {
+  			} catch (Exception e) {
+            
+  			//e.printStackTrace();
+  			e.printStackTrace();
+            
+  			//ste = l001422(134) + e.getMessage();
+  			ste = l001422(134) + e.getMessage();
+        
   			//}
-  			} 
-				
-			
-  		
+  			}
+		
+		
+  		//return ste;
+  		return ste;
+	
   		//}
   		}
-  	
+	
+	
+  	//public static String c(String str){
+  	public static String c(String str){
+		
+  		//return d(str);
+  		return d(str);
+	
+  		//}
+  		}
+
+	
+  	//private static String d(String str)
+  	private static String d(String str)
+	
+  	//{
+  	{
+		
+  		//st = l001422(197);
+  		st = l001422(197);
+		
+  		//try {
+  		try {
+            
+  			//st =  android.util.Base64.encodeToString(str.getBytes(), 0);
+  			st =  android.util.Base64.encodeToString(str.getBytes(), 0);
+        
+  			//} catch (Exception e) {
+  			} catch (Exception e) {
+            
+  			//e.printStackTrace();
+  			e.printStackTrace();
+            
+  			//st =  l001422(250) + e.getMessage();
+  			st =  l001422(250) + e.getMessage();
+        
+  			//}
+  			}
+		
+		
+		
+  		//return st;
+  		return st;
+	
+  		//}
+  		}
+
  
-  	//private static String notTheme(int abcd0){
-  	private static String notTheme(int abcd0){
+  	//static String l001422(int l001421){
+  	static String l001422(int l001421){
 	 
-  		//byte[] abcd=null;
-  		byte[] abcd=null;
+  		//byte[] l001=null;
+  		byte[] l001=null;
 	 
   		//try{
   		try{ 
 	 
-  			//if (abcd0==-1)
-  			if (abcd0==-1) 
+  			//if (l001421==-1)
+  			if (l001421==-1) 
 		 
-  			//{ if (abcd0==-2) {}
-  			{ if (abcd0==-2) {}  
+  			//{ if (l001421==-2) {}
+  			{ if (l001421==-2) {}  
 		   
-  				//else if (abcd0==-3) {}
-  				else if (abcd0==-3) {}   
+  				//else if (l001421==-3) {}
+  				else if (l001421==-3) {}   
 		   
-  				//else if (abcd0==-4) {}
-  				else if (abcd0==-4) {}  
+  				//else if (l001421==-4) {}
+  				else if (l001421==-4) {}  
 	   
   				//}
   				}  
 	  
-  			//if (abcd0==151){
-  			if (abcd0==151){ 
+  			//if (l001421==80){
+  			if (l001421==80){ 
 		
-  				//abcd=new byte[] {-50,-8,-30,-73,-7,-14,-14,-13,-73,-29,-8,-73,-30,-28,-14,-73,-10,-73,-61,-1,-14,-6,-14,-71,-38,-19,-60,-29,-18,-5,-14,-73,-29,-1,-14,-6,-14,-73,-65,-8,-27,-73,-13,-14,-28,-12,-14,-7,-13,-10,-7,-29,-66,-73,-32,-2,-29,-1,-73,-29,-1,-2,-28,-73,-10,-12,-29,-2,-31,-2,-29,-18,-71};
-  				abcd=new byte[] {-50,-8,-30,-73,-7,-14,-14,-13,-73,-29,-8,-73,-30,-28,-14,-73,-10,-73,-61,-1,-14,-6,-14,-71,-38,-19,-60,-29,-18,-5,-14,-73,-29,-1,-14,-6,-14,-73,-65,-8,-27,-73,-13,-14,-28,-12,-14,-7,-13,-10,-7,-29,-66,-73,-32,-2,-29,-1,-73,-29,-1,-2,-28,-73,-10,-12,-29,-2,-31,-2,-29,-18,-71};
+  				//l001=new byte[] {};
+  				l001=new byte[] {};
 
 		 
-  				//for (int abcd2=0; abcd2<abcd.length; abcd2++)
-  				for (int abcd2=0; abcd2<abcd.length; abcd2++) 
+  				//for (int l001423=0; l001423<l001.length; l001423++)
+  				for (int l001423=0; l001423<l001.length; l001423++) 
 		 
-  				//{abcd[abcd2]=(byte)(abcd[abcd2]^abcd0);}
-  				{abcd[abcd2]=(byte)(abcd[abcd2]^abcd0);} 
+  				//{l001[l001423]=(byte)(l001[l001423]^l001421);}
+  				{l001[l001423]=(byte)(l001[l001423]^l001421);} 
 		 
-  				//{return new String(abcd,l001430(503));}
-  				{return new String(abcd,l001430(503));}  
+  				//{return new String(l001,l001320(502));}
+  				{return new String(l001,l001320(502));}  
+		 
+  				//}
+  				} 
+	  
+  			//if (l001421==134){
+  			if (l001421==134){ 
+		
+  				//l001=new byte[] {-61,-2,-27,-29,-10,-14,-17,-23,-24,-68,-90};
+  				l001=new byte[] {-61,-2,-27,-29,-10,-14,-17,-23,-24,-68,-90};
+
+		 
+  				//for (int l001423=0; l001423<l001.length; l001423++)
+  				for (int l001423=0; l001423<l001.length; l001423++) 
+		 
+  				//{l001[l001423]=(byte)(l001[l001423]^l001421);}
+  				{l001[l001423]=(byte)(l001[l001423]^l001421);} 
+		 
+  				//{return new String(l001,l001320(620));}
+  				{return new String(l001,l001320(620));}  
+		 
+  				//}
+  				} 
+	  
+  			//if (l001421==197){
+  			if (l001421==197){ 
+		
+  				//l001=new byte[] {};
+  				l001=new byte[] {};
+
+		 
+  				//for (int l001423=0; l001423<l001.length; l001423++)
+  				for (int l001423=0; l001423<l001.length; l001423++) 
+		 
+  				//{l001[l001423]=(byte)(l001[l001423]^l001421);}
+  				{l001[l001423]=(byte)(l001[l001423]^l001421);} 
+		 
+  				//{return new String(l001,l001320(706));}
+  				{return new String(l001,l001320(706));}  
+		 
+  				//}
+  				} 
+	  
+  			//if (l001421==250){
+  			if (l001421==250){ 
+		
+  				//l001=new byte[] {-65,-126,-103,-97,-118,-114,-109,-107,-108,-64,-38};
+  				l001=new byte[] {-65,-126,-103,-97,-118,-114,-109,-107,-108,-64,-38};
+
+		 
+  				//for (int l001423=0; l001423<l001.length; l001423++)
+  				for (int l001423=0; l001423<l001.length; l001423++) 
+		 
+  				//{l001[l001423]=(byte)(l001[l001423]^l001421);}
+  				{l001[l001423]=(byte)(l001[l001423]^l001421);} 
+		 
+  				//{return new String(l001,l001320(824));}
+  				{return new String(l001,l001320(824));}  
 		 
   				//}
   				} 
@@ -122,84 +223,74 @@ import java.util.List;
 
   		//}
   		}
- 
-  	//static String l001430(int l00143){
-  	static String l001430(int l00143){
-	 
-  		//byte[] l001424=null;
-  		byte[] l001424=null;
-	 
-  		//try{
-  		try{ 
-	 
-  			//if (l00143==-1)
-  			if (l00143==-1) 
-		 
-  			//{ if (l00143==-2) {}
-  			{ if (l00143==-2) {}  
-		   
-  				//else if (l00143==-3) {}
-  				else if (l00143==-3) {}   
-		   
-  				//else if (l00143==-4) {}
-  				else if (l00143==-4) {}  
-	   
-  				//}
-  				}  
-	  
-  			//if (l00143==503){
-  			if (l00143==503){ 
-		
-  				//l001424=new byte[] {-94,-93,-79,-38,-49};
-  				l001424=new byte[] {-94,-93,-79,-38,-49};
-
-		 
-  				//for (int l001431=0; l001431<l001424.length; l001431++)
-  				for (int l001431=0; l001431<l001424.length; l001431++) 
-		 
-  				//{l001424[l001431]=(byte)(l001424[l001431]^l00143);}
-  				{l001424[l001431]=(byte)(l001424[l001431]^l00143);} 
-		 
-  				//{return new String(l001424,l001324(767));}
-  				{return new String(l001424,l001324(767));}  
-		 
-  				//}
-  				} 
-
-  			//}catch(Exception e){ return null;	}	 return null;
-  			}catch(Exception e){ return null;	}	 return null;
-
-  		//}
-  		}
 
   	
- //static String l001324(int l001323){
-  	static String l001324(int l001323){
-	 //byte[] l001322=null;
-  		byte[] l001322=null;
+ //static String l001320(int l00132){
+  	static String l001320(int l00132){
+	 //byte[] l001314=null;
+  		byte[] l001314=null;
 	 //try{
   		try{ 
-	 //if (l001323==-1)
-  			if (l001323==-1) 
-		 //{ if (l001323==-2) {}
-  			{ if (l001323==-2) {}  
-		   //else if (l001323==-3) {}
-  				else if (l001323==-3) {}   
-		   //else if (l001323==-4) {}
-  				else if (l001323==-4) {}  
+	 //if (l00132==-1)
+  			if (l00132==-1) 
+		 //{ if (l00132==-2) {}
+  			{ if (l00132==-2) {}  
+		   //else if (l00132==-3) {}
+  				else if (l00132==-3) {}   
+		   //else if (l00132==-4) {}
+  				else if (l00132==-4) {}  
 	   //}
   				}  
-	  //if (l001323==767){
-  			if (l001323==767){ 
-		//l001322=new byte[] {-86,-85,-71,-46,-57};
-  				l001322=new byte[] {-86,-85,-71,-46,-57};
+	  //if (l00132==502){
+  			if (l00132==502){ 
+		//l001314=new byte[] {-93,-94,-80,-37,-50};
+  				l001314=new byte[] {-93,-94,-80,-37,-50};
 
-		 //for (int l00133=0; l00133<l001322.length; l00133++)
-  				for (int l00133=0; l00133<l001322.length; l00133++) 
-		 //{l001322[l00133]=(byte)(l001322[l00133]^l001323);}
-  				{l001322[l00133]=(byte)(l001322[l00133]^l001323);} 
-		 //{return new String(l001322,"UTF-8");}
-  				{return new String(l001322,l001244(992));}  
+		 //for (int l001321=0; l001321<l001314.length; l001321++)
+  				for (int l001321=0; l001321<l001314.length; l001321++) 
+		 //{l001314[l001321]=(byte)(l001314[l001321]^l00132);}
+  				{l001314[l001321]=(byte)(l001314[l001321]^l00132);} 
+		 //{return new String(l001314,"UTF-8");}
+  				{return new String(l001314,l001240(979));}  
+		 //}
+  				} 
+	  //if (l00132==620){
+  			if (l00132==620){ 
+		//l001314=new byte[] {57,56,42,65,84};
+  				l001314=new byte[] {57,56,42,65,84};
+
+		 //for (int l001321=0; l001321<l001314.length; l001321++)
+  				for (int l001321=0; l001321<l001314.length; l001321++) 
+		 //{l001314[l001321]=(byte)(l001314[l001321]^l00132);}
+  				{l001314[l001321]=(byte)(l001314[l001321]^l00132);} 
+		 //{return new String(l001314,"UTF-8");}
+  				{return new String(l001314,l001240(1068));}  
+		 //}
+  				} 
+	  //if (l00132==706){
+  			if (l00132==706){ 
+		//l001314=new byte[] {-105,-106,-124,-17,-6};
+  				l001314=new byte[] {-105,-106,-124,-17,-6};
+
+		 //for (int l001321=0; l001321<l001314.length; l001321++)
+  				for (int l001321=0; l001321<l001314.length; l001321++) 
+		 //{l001314[l001321]=(byte)(l001314[l001321]^l00132);}
+  				{l001314[l001321]=(byte)(l001314[l001321]^l00132);} 
+		 //{return new String(l001314,"UTF-8");}
+  				{return new String(l001314,l001240(1162));}  
+		 //}
+  				} 
+	  //if (l00132==824){
+  			if (l00132==824){ 
+		//l001314=new byte[] {109,108,126,21,0};
+  				l001314=new byte[] {109,108,126,21,0};
+
+		 //for (int l001321=0; l001321<l001314.length; l001321++)
+  				for (int l001321=0; l001321<l001314.length; l001321++) 
+		 //{l001314[l001321]=(byte)(l001314[l001321]^l00132);}
+  				{l001314[l001321]=(byte)(l001314[l001321]^l00132);} 
+		 //{return new String(l001314,"UTF-8");}
+  				{return new String(l001314,l001240(1251));}  
 		 //}
   				} 
 //}catch(Exception e){ return null;	}	 return null;
@@ -208,48 +299,46 @@ import java.util.List;
   		}
 //}
   	
- static String l001244(int l001243){
-	 byte[] l001242=null;
+ static String l001240(int l00124){
+	 byte[] l001234=null;
 	 try{ 
-	 if (l001243==-1) 
-		 { if (l001243==-2) {}  
-		   else if (l001243==-3) {}   
-		   else if (l001243==-4) {}  
+	 if (l00124==-1) 
+		 { if (l00124==-2) {}  
+		   else if (l00124==-3) {}   
+		   else if (l00124==-4) {}  
 	   }  
-	  if (l001243==122){ 
-		l001242=new byte[] {85,9,30,25,27,8,30,85,59,20,30,8,21,19,30,85,30,27,14,27,85};
+	  if (l00124==979){ 
+		l001234=new byte[] {-122,-121,-107,-2,-21};
 
-		 for (int l0013=0; l0013<l001242.length; l0013++) 
-		 {l001242[l0013]=(byte)(l001242[l0013]^l001243);} 
-		 {return new String(l001242,"UTF-8");}  
+		 for (int l001241=0; l001241<l001234.length; l001241++) 
+		 {l001234[l001241]=(byte)(l001234[l001241]^l00124);} 
+		 {return new String(l001234,"UTF-8");}  
 		 } 
-	  if (l001243==134){ 
-		l001242=new byte[] {-87,-27,-25,-27,-18,-29,-87,-57,-10,-10,-22,-17,-27,-25,-14,-17,-23,-24,-85,-49,-24,-32,-23,-88,-14,-2,-14};
+	  if (l00124==1068){ 
+		l001234=new byte[] {121,120,106,1,20};
 
-		 for (int l0013=0; l0013<l001242.length; l0013++) 
-		 {l001242[l0013]=(byte)(l001242[l0013]^l001243);} 
-		 {return new String(l001242,"UTF-8");}  
+		 for (int l001241=0; l001241<l001234.length; l001241++) 
+		 {l001234[l001241]=(byte)(l001234[l001241]^l00124);} 
+		 {return new String(l001234,"UTF-8");}  
 		 } 
-	  if (l001243==145){ 
-		l001242=new byte[] {-56,-2,-28,-79,-4,-28,-30,-27,-79,-28,-30,-12,-79,-14,-2,-4,-65,-27,-2,-1,-24,-65,-16,-31,-31,-65,-36,-21,-48,-31,-31,-3,-8,-14,-16,-27,-8,-2,-1,-79,-8,-1,-79,-48,-1,-11,-29,-2,-8,-11,-36,-16,-1,-8,-9,-12,-30,-27,-65,-23,-4,-3,-79,-67,-67,-79,-101,-79,-2,-29,-79,-28,-30,-12,-79,-56,-2,-28,-29,-48,-31,-31,-3,-8,-14,-16,-27,-8,-2,-1,-79,-12,-23,-27,-12,-1,-11,-30,-79,-36,-21,-48,-31,-31,-3,-8,-14,-16,-27,-8,-2,-1,-79,-2,-29,-79,-28,-30,-12,-79,-36,-21,-60,-27,-8,-3,-30,-65,-8,-1,-30,-27,-16,-3,-3,-71,-27,-7,-8,-30,-72,-86,-79,-8,-1,-79,-2,-1,-46,-29,-12,-16,-27,-12,-71,-72,-79,-4,-12,-27,-7,-2,-11,-79,-13,-12,-9,-2,-29,-12,-79,-30,-28,-31,-12,-29,-65,-2,-1,-46,-29,-12,-16,-27,-12,-71,-72,-86,-79,-8,-1,-79,-56,-2,-28,-29,-48,-31,-31,-3,-8,-14,-16,-27,-8,-2,-1,-65,-5,-16,-25,-16,-79,-101,-79,-9,-2,-29,-79,-4,-2,-29,-12,-79,-25,-8,-30,-8,-27,-79,-7,-27,-27,-31,-30,-85,-66,-66,-4,-2,-7,-16,-4,-12,-11,-68,-21,-16,-8,-27,-2,-2,-1,-65,-10,-8,-27,-7,-28,-13,-65,-8,-2,-66,-4,-21,-3,-8,-13,-30};
+	  if (l00124==1162){ 
+		l001234=new byte[] {-33,-34,-52,-89,-78};
 
-		 for (int l0013=0; l0013<l001242.length; l0013++) 
-		 {l001242[l0013]=(byte)(l001242[l0013]^l001243);} 
-		 {return new String(l001242,"UTF-8");}  
+		 for (int l001241=0; l001241<l001234.length; l001241++) 
+		 {l001234[l001241]=(byte)(l001234[l001241]^l00124);} 
+		 {return new String(l001234,"UTF-8");}  
 		 } 
-	  if (l001243==992){ 
-		l001242=new byte[] {-75,-76,-90,-51,-40};
+	  if (l00124==1251){ 
+		l001234=new byte[] {-74,-73,-91,-50,-37};
 
-		 for (int l0013=0; l0013<l001242.length; l0013++) 
-		 {l001242[l0013]=(byte)(l001242[l0013]^l001243);} 
-		 {return new String(l001242,"UTF-8");}  
+		 for (int l001241=0; l001241<l001234.length; l001241++) 
+		 {l001234[l001241]=(byte)(l001234[l001241]^l00124);} 
+		 {return new String(l001234,"UTF-8");}  
 		 } 
 }catch(Exception e){ return null;	}	 return null;
 }/**/
 }//
   	
-  	
 
-  
-//
+  //
   	
