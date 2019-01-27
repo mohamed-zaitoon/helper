@@ -58,41 +58,13 @@ package com.example.app;
       MzUtils.showMessage(getApplicationContext(),"Hello Man"); // this Toast message will be show after minute 
    }
    }
- ``` 
- In this file res/values/styles.xml your theme best be this:
-```xml
-<resources>
-
-	<!-- This Method Deprecated, Use Theme.AppCompat -->
-    
-   <style name= "AppTheme_Dark" parent= "@style/Theme.MzStyle">
-   </style>
-   
-   <style name= "AppTheme_NoActionBar" parent= "@style/Theme.MzStyle.NoActionBar">
-   </style>
-   
-   <style name= "AppTheme_NoActionBar_Fullscreen" parent= "@style/Theme.MzStyle.NoActionBar.Fullscreen">
-   </style>
-   
-   <style name= "AppTheme_Light" parent= "@style/Theme.MzStyle.Light">
-   </style>
-   
-   <style name= "AppTheme_Light_DarkActionBar" parent= "@style/Theme.MzStyle.Light.DarkActionBar">
-   </style>
-   
-	<style name= "AppTheme_Light_NoActionBar" parent= "@style/Theme.MzStyle.Light.NoActionBar">
-   </style>
-   
-	<style name= "AppTheme_Light_NoActionBar_Fullscreen" parent= "@style/Theme.MzStyle.Light.NoActionBar.Fullscreen">
-   </style>
- </resources>
  ```
  In progaurd-rules.pro add this lines:
  ```txt
--keepclassmembers class com.tony.** {*; }
--keep public class com.tony.** { *;}
--keepclassmembers interface com.tony.** {*;}
--keep public interface com.tony.** {*;}
+-keepclassmembers class com.tony.util.** {*; }
+-keep public class com.tony.util.** { *;}
+-keepclassmembers interface com.tony.interfaces.** {*;}
+-keep public interface com.tony.interfaces.** {*;}
 ```
 
  
