@@ -23,8 +23,8 @@ repositories {
 }
 dependencies {
 
- implementation 'com.android.support:appcompat-v7:27.0.2'
- implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.6'
+
+ implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.7'
  
 }
 ```
