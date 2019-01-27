@@ -24,7 +24,7 @@ repositories {
 dependencies {
 
  implementation 'com.android.support:appcompat-v7:27.0.2'
- implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.5'
+ implementation 'io.github.mohamed-zaitoon:mzlibs:3.0.6'
  
 }
 ```
@@ -32,11 +32,9 @@ dependencies {
 ## Quick Tutorial
 
 If you want to make timer or show toast you need to add most of code in your class.
-or you can make `MainActivity` class, extends  `MzActivity` class:
+or you can make `MainActivity` class, extends  `Activity` class:
 ```java
 package com.example.app;
-   
-   import com.tony.app.MzActivity;
    
    
    import android.os.Bundle.
@@ -45,7 +43,7 @@ package com.example.app;
    
    import com.tony.interfaces.*;
    
-   public class MainActivity extends MzActivity implements TimerInterface {
+   public class MainActivity extends Activity implements TimerInterface {
    
        @Override
        portected void onCreate(Bundle bundle){
@@ -57,7 +55,7 @@ package com.example.app;
    // you must add this
    @Override 
    public void startTimer {
-      MzUtils.showMessage(this,"Hello Man"); // this Toast message will be show after minute 
+      MzUtils.showMessage(getApplicationContext(),"Hello Man"); // this Toast message will be show after minute 
    }
    }
  ``` 
@@ -65,8 +63,7 @@ package com.example.app;
 ```xml
 <resources>
 
-	<!-- MzStyle is parent of theme AppCompat -->
-    <!-- if you wont use this theme your app will be crash -->
+	<!-- This Method Deprecated, Use Theme.AppCompat -->
     
    <style name= "AppTheme_Dark" parent= "@style/Theme.MzStyle">
    </style>

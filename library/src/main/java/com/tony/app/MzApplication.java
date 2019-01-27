@@ -25,6 +25,8 @@ import java.util.List;
 
 
   //public class MzApplication extends Application
+@Deprecated
+
   public class MzApplication extends Application
 
   //{

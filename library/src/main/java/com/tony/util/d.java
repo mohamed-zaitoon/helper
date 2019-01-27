@@ -1,8 +1,8 @@
 package com.tony.util;
 
-import com.tony.app.*;
 import com.tony.interfaces.*;
 import java.util.*;
+import android.app.*;
 
 final class d extends TimerTask
 
@@ -15,11 +15,11 @@ final class d extends TimerTask
         private TimerInterface timer;
 
         //private MzActivity act;
-        private MzActivity act;
+        private Activity act;
 
 
         //public d(MzActivity mAct, TimerInterface t){
-        public d(MzActivity mAct, TimerInterface t){
+        public d(Activity mAct, TimerInterface t){
 
                 //this.timer = t;
                 this.timer = t;

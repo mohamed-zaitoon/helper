@@ -1,4 +1,4 @@
--keepclassmembers class com.tony.** {*; }
--keep public class com.tony.** { *;}
--keepclassmembers interface com.tony.** {*;}
--keep public interface com.tony.** {*;}
+-keepclassmembers class com.tony.util.** {*; }
+-keep public class com.tony.util.** { *;}
+-keepclassmembers interface com.tony.interface.** {*;}
+-keep public interface com.tony.interface.** {*;}

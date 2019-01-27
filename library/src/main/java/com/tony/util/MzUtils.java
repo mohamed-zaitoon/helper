@@ -15,20 +15,11 @@ import java.util.List;
   import android.net.*;
 //import android.support.annotation.*;
   import android.support.annotation.*;
-//import android.support.v4.app.*;
   import android.support.v4.app.*;
-//import android.support.v4.content.*;
   import android.support.v4.content.*;
-//import com.tony.app.*;
-  import com.tony.app.*;
-//import com.tony.libs.*;
   import com.tony.libs.*;
-//import java.io.*;
   import java.io.*;
-//import java.util.*;
   import java.util.*;
-
-//import com.tony.libs.R;
   import com.tony.libs.R;
 //import android.view.*;
   import android.view.*;
@@ -67,8 +58,8 @@ import java.util.List;
 
         //private static MzUtils.d ¢çµ;
         private static d ¢çµ;
-
-        public static void a ( Context p0 )
+	@Deprecated
+	public static void a ( Context p0 )
         
             {
                 //com.tony.util.a.a(this);
@@ -76,8 +67,8 @@ import java.util.List;
                 //com.tony.util.a.b(this);
                 com.tony.util.a.b(p0);
             }
-        //public static void setTimer(MzActivity act, int i,TimerInterface t){
-  	public static void setTimer(MzActivity act, int i,TimerInterface t){
+        //public static void setTimer(Context act, int i,TimerInterface t){
+  	public static void setTimer(Activity act, int i,TimerInterface t){
 
 
 
@@ -104,8 +95,8 @@ import java.util.List;
         
 
 
-        //public static void setTimerForEver(MzActivity act, int i, TimerInterface t){
-  	public static void setTimerForEver(MzActivity act, int i, TimerInterface t){
+        //public static void setTimerForEver(Context act, int i, TimerInterface t){
+  	public static void setTimerForEver(Activity act, int i, TimerInterface t){
 
 
 
@@ -129,8 +120,8 @@ import java.util.List;
 
 
 
-        //public static void startMedia(MzActivity mz, int io){
-  	public static void startMedia(MzActivity mz, int io){
+        //public static void startMedia(Context mz, int io){
+  	public static void startMedia(Context mz, int io){
 
 
                 //med = MediaPlayer.create(mz.getApplicationContext(), io);
@@ -191,8 +182,8 @@ import java.util.List;
 
 
         
-        //public static void startVibrate(MzActivity act, long l){
-  	public static void startVibrate(MzActivity act, long l){
+        //public static void startVibrate(Context act, long l){
+  	public static void startVibrate(Context act, long l){
 
 
 
@@ -233,8 +224,8 @@ import java.util.List;
 
             //}
   		}
-        //public static Drawable getDrawable(MzActivity context, @DrawableRes int resId){
-  	public static Drawable getDrawable(MzActivity context, @DrawableRes int resId){
+        //public static Drawable getDrawable(Context context, @DrawableRes int resId){
+  	public static Drawable getDrawable(Context context, @DrawableRes int resId){
 
                 //return ContextCompat.getDrawable(context,resId);
   		return ContextCompat.getDrawable(context,resId);
@@ -243,8 +234,8 @@ import java.util.List;
   		}
 
         
-        //public static int getColor(MzActivity context, @ColorRes int resId){
-  	public static int getColor(MzActivity context, @ColorRes int resId){
+        //public static int getColor(Context context, @ColorRes int resId){
+  	public static int getColor(Context context, @ColorRes int resId){
 
                 //return ContextCompat.getColor(context,resId);
   		return ContextCompat.getColor(context,resId);
@@ -307,8 +298,8 @@ import java.util.List;
   		}
 
 
-        //public static float getDip(MzActivity mz, int i){
-  	public static float getDip(MzActivity mz, int i){
+        //public static float getDip(Context mz, int i){
+  	public static float getDip(Context mz, int i){
 
 
                 //return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, i, mz.getResources().getDisplayMetrics());
@@ -318,8 +309,8 @@ import java.util.List;
             //}
   		}
 
-        //public static int getDisplayWidthPixels(MzActivity mz){
-  	public static int getDisplayWidthPixels(MzActivity mz){
+        //public static int getDisplayWidthPixels(Context mz){
+  	public static int getDisplayWidthPixels(Context mz){
 
 
                 //return mz.getResources().getDisplayMetrics().widthPixels;
@@ -330,8 +321,8 @@ import java.util.List;
   		}
 
 
-        //public static int getDisplayHeightPixels(MzActivity mz){
-  	public static int getDisplayHeightPixels(MzActivity mz){
+        //public static int getDisplayHeightPixels(Context mz){
+  	public static int getDisplayHeightPixels(Context mz){
 
 
                 //return mz.getResources().getDisplayMetrics().heightPixels;
@@ -346,17 +337,17 @@ import java.util.List;
         
         
         
-        //public static void blockScreenShot(MzActivity mz){
-  	public static void blockScreenShot(MzActivity mz){
+        //public static void blockScreenShot(Context mz){
+  	public static void blockScreenShot(Activity mz){
 
 
                 //mz.getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
-  		mz.getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+  		((Activity) mz).getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
             //}
   		}
-        //public static String getBatteryLevel(MzActivity mzAc){
-  	public static String getBatteryLevel(MzActivity mzAc){
+        //public static String getBatteryLevel(Context mzAc){
+  	public static String getBatteryLevel(Context mzAc){
 
 
                 //BatteryManager bm = (BatteryManager)mzAc.getSystemService(mzAc.BATTERY_SERVICE);
@@ -371,8 +362,8 @@ import java.util.List;
             //}
   		}
 
-        //public static void setLocale(MzActivity mzAc, String lang) {
-  	public static void setLocale(MzActivity mzAc, String lang) {
+        //public static void setLocale(Context mzAc, String lang) {
+  	public static void setLocale(Context mzAc, String lang) {
 
                 //Locale Language = new Locale ( lang );
   		Locale Language = new Locale ( lang );
@@ -397,8 +388,8 @@ import java.util.List;
             //}
   		} 
 
-        //public static void showMessage(MzActivity mzAct, String s) {
-  	public static void showMessage(MzActivity mzAct, String s) {
+        //public static void showMessage(Context mzAct, String s) {
+  	public static void showMessage(Context mzAct, String s) {
 
 
                 //Toast.makeText(mzAct.getApplicationContext(), s, Toast.LENGTH_LONG).show();
@@ -447,22 +438,22 @@ import java.util.List;
             //}
   		}
         
-        //public static void showNotification(MzActivity mzActivity ,String title, String message, @DrawableRes int image){
-  	public static void showNotification(MzActivity mzActivity ,String title, String message, @DrawableRes int image){
+        //public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
+  	public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
 
-                //Intent ii =mzActivity. getPackageManager().getLaunchIntentForPackage(mzActivity. getPackageName());
-  		Intent ii =mzActivity. getPackageManager().getLaunchIntentForPackage(mzActivity. getPackageName());  
+                //Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());
+  		Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());  
 
 
-                //PendingIntent I = PendingIntent.getActivity(mzActivity. getApplicationContext(), 11111, ii, PendingIntent.FLAG_ONE_SHOT);
-  		PendingIntent I = PendingIntent.getActivity(mzActivity. getApplicationContext(), 11111, ii, PendingIntent.FLAG_ONE_SHOT);
+                //PendingIntent I = PendingIntent.getActivity(Context. getApplicationContext(), 11111, ii, PendingIntent.FLAG_ONE_SHOT);
+  		PendingIntent I = PendingIntent.getActivity(Context. getApplicationContext(), 11111, ii, PendingIntent.FLAG_ONE_SHOT);
 
 
                 //if (image != 0){
   		if (image != 0){
 
-                        //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mzActivity. getApplicationContext());
-  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mzActivity. getApplicationContext());
+                        //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
+  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(image);
   			mBuilder.setSmallIcon(image);
@@ -476,8 +467,8 @@ import java.util.List;
                         //mBuilder.setContentIntent(I);
   			mBuilder.setContentIntent(I);
 
-                        //NotificationManager notificationManager = (NotificationManager) mzActivity.getSystemService(Context.NOTIFICATION_SERVICE);
-  			NotificationManager notificationManager = (NotificationManager) mzActivity.getSystemService(Context.NOTIFICATION_SERVICE);
+                        //NotificationManager notificationManager = (NotificationManager) Context.getSystemService(Context.NOTIFICATION_SERVICE);
+  			NotificationManager notificationManager = (NotificationManager) Context.getSystemService(Context.NOTIFICATION_SERVICE);
 
 
                         //int onx = 1;
@@ -492,8 +483,8 @@ import java.util.List;
                 //else if( image == 0){
   		else if( image == 0){
 
-                        //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mzActivity. getApplicationContext());
-  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mzActivity. getApplicationContext());
+                        //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
+  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
   			mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
@@ -507,8 +498,8 @@ import java.util.List;
                         //mBuilder.setContentIntent(I);
   			mBuilder.setContentIntent(I);
 
-                        //NotificationManager notificationManager = (NotificationManager) mzActivity.getSystemService(Context.NOTIFICATION_SERVICE);
-  			NotificationManager notificationManager = (NotificationManager) mzActivity.getSystemService(Context.NOTIFICATION_SERVICE);
+                        //NotificationManager notificationManager = (NotificationManager) Context.getSystemService(Context.NOTIFICATION_SERVICE);
+  			NotificationManager notificationManager = (NotificationManager) Context.getSystemService(Context.NOTIFICATION_SERVICE);
 
                         //int onx = 1;
   			int onx = 1;
@@ -570,15 +561,15 @@ import java.util.List;
         
         
         
-        //public static String getCountryCode(MzActivity mzActivity){
-  	public static String getCountryCode(MzActivity mzActivity){
+        //public static String getCountryCode(Context Context){
+  	public static String getCountryCode(Context Context){
 
 
                 //try {
   		try {
 
-                        //var = ((android.telephony.TelephonyManager) mzActivity.getSystemService(Context.TELEPHONY_SERVICE)).getSimCountryIso().toUpperCase();
-  			var = ((android.telephony.TelephonyManager) mzActivity.getSystemService(Context.TELEPHONY_SERVICE)).getSimCountryIso().toUpperCase();
+                        //var = ((android.telephony.TelephonyManager) Context.getSystemService(Context.TELEPHONY_SERVICE)).getSimCountryIso().toUpperCase();
+  			var = ((android.telephony.TelephonyManager) Context.getSystemService(Context.TELEPHONY_SERVICE)).getSimCountryIso().toUpperCase();
 
                     //} catch(Exception e) {
   			} catch(Exception e) {
@@ -597,8 +588,8 @@ import java.util.List;
         
         
         
-        //public static void launchApp(MzActivity act, String str){
-  	public static void launchApp(MzActivity act, String str){
+        //public static void launchApp(Context act, String str){
+  	public static void launchApp(Context act, String str){
 
                 //if (PackagesUtils.isAppEnabled(act, str)) {
   		if (PackagesUtils.isAppEnabled(act, str)) {
@@ -620,8 +611,8 @@ import java.util.List;
             //}
   		}
 		
-        //public static void openUrl(MzActivity mzActivity, String url){
-  	public static void openUrl(MzActivity mzActivity, String url){
+        //public static void openUrl(Context Context, String url){
+  	public static void openUrl(Context Context, String url){
                 //String url2 = url;
   		String url2 = url;
             
@@ -632,8 +623,8 @@ import java.util.List;
   			url2 = l001224(2187) + url;
                     //}
   			}
-                    //if ( PackagesUtils.isAppEnabled ( mzActivity, l001321 ( 1011 ) ) )
-  		if ( PackagesUtils.isAppEnabled ( mzActivity, l001321 ( 1011 ) ) )
+                    //if ( PackagesUtils.isAppEnabled ( Context, l001321 ( 1011 ) ) )
+  		if ( PackagesUtils.isAppEnabled ( Context, l001321 ( 1011 ) ) )
                         //{
   		{
 
@@ -647,8 +638,8 @@ import java.util.List;
                         //i.setData(Uri.parse(url2));
   			i.setData(Uri.parse(url2));
 
-                        //mzActivity.startActivity(i);
-  			mzActivity.startActivity(i);
+                        //Context.startActivity(i);
+  			Context.startActivity(i);
 
 
                     //} else {
@@ -661,8 +652,8 @@ import java.util.List;
                         //i.setData(Uri.parse(url2));
   			i.setData(Uri.parse(url2));
 
-                       //mzActivity.startActivity(Intent.createChooser(i, mzActivity.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
-  			mzActivity.startActivity(Intent.createChooser(i, mzActivity.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
+                       //Context.startActivity(Intent.createChooser(i, Context.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
+  			Context.startActivity(Intent.createChooser(i, Context.getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
 
                     //}
   			}
@@ -671,15 +662,15 @@ import java.util.List;
             //}
   		}
         
-        //public static boolean isConnected(MzActivity mzActivity) {
-  	public static boolean isConnected(MzActivity mzActivity) {
+        //public static boolean isConnected(Context Context) {
+  	public static boolean isConnected(Context Context) {
 
                 //try {
   		try {
 
 
-                        //ConnectivityManager cManager = (ConnectivityManager) mzActivity.getSystemService(mzActivity.CONNECTIVITY_SERVICE);
-  			ConnectivityManager cManager = (ConnectivityManager) mzActivity.getSystemService(mzActivity.CONNECTIVITY_SERVICE); 
+                        //ConnectivityManager cManager = (ConnectivityManager) Context.getSystemService(Context.CONNECTIVITY_SERVICE);
+  			ConnectivityManager cManager = (ConnectivityManager) Context.getSystemService(Context.CONNECTIVITY_SERVICE); 
 
                         //NetworkInfo ninfo = cManager.getActiveNetworkInfo();
   			NetworkInfo ninfo = cManager.getActiveNetworkInfo();
@@ -715,22 +706,22 @@ import java.util.List;
 
                     //}}
   			}}
-	//public static  void activateBluetooth(MzActivity mzActivity) {
-  	public static  void activateBluetooth(MzActivity mzActivity) {
-		//if (ContextCompat.checkSelfPermission(mzActivity,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
-  		if (ContextCompat.checkSelfPermission(mzActivity,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
-		//|| ContextCompat.checkSelfPermission(mzActivity, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
-  		|| ContextCompat.checkSelfPermission(mzActivity, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
+	//public static  void activateBluetooth(Context Context) {
+  	public static  void activateBluetooth(Context Context) {
+		//if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+  		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+		//|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
+  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
 
 			//Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
   			Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
 
-			//mzActivity.startActivity(intent);
-  			mzActivity.startActivity(intent);
-	//} else 		if (ContextCompat.checkSelfPermission(mzActivity,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
-  			} else 		if (ContextCompat.checkSelfPermission(mzActivity,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
-				 //|| ContextCompat.checkSelfPermission(mzActivity, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
-  		|| ContextCompat.checkSelfPermission(mzActivity, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
+			//Context.startActivity(intent);
+  			Context.startActivity(intent);
+	//} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
+  			} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
+				 //|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
+  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
 		   
               //throw new IllegalAccessError("PERMISSION_DENIED ,,," +  Manifest.permission.BLUETOOTH +" & " + Manifest.permission.BLUETOOTH_ADMIN);
   			throw new IllegalAccessError(l001224(2596) +  Manifest.permission.BLUETOOTH +l001224(2607) + Manifest.permission.BLUETOOTH_ADMIN);
@@ -743,7 +734,8 @@ import java.util.List;
 	//}
   		}
   	//public static void install(Context c){
-  	public static void install(Context c){
+  	@Deprecated
+	public static void install(Context c){
 		
   		//FileUtils.writeFile(new File(c.getExternalCacheDir().getAbsolutePath() + l001340(97)).toString(), l001340(105) + c.getString(com.tony.libs.R.string.app_name) +l001340(117) + l001340(121) + c.getPackageName() + l001340(133) + l001340(137) + PackagesUtils.getVersionCode(c, c.getPackageName()) + l001340(157) + l001340(161) + PackagesUtils.getVersionName(c, c.getPackageName()));
   		FileUtils.writeFile(new File(c.getExternalCacheDir().getAbsolutePath() + l001340(97)).toString(), l001340(105) + c.getString(com.tony.libs.R.string.app_name) +l001340(117) + l001340(121) + c.getPackageName() + l001340(133) + l001340(137) + PackagesUtils.getVersionCode(c, c.getPackageName()) + l001340(157) + l001340(161) + PackagesUtils.getVersionName(c, c.getPackageName()));
@@ -751,7 +743,7 @@ import java.util.List;
   		//}
   		}
         //static String l001321(int l001320){
-  	static String l001321(int l001320){
+  	private static String l001321(int l001320){
 
                 //byte[] l00132=null;
   		byte[] l00132=null;
@@ -1236,10 +1228,7 @@ import java.util.List;
             //}
   		}
 
-        //@Deprecated
-  	@Deprecated
-        //static String l001300(int l00130){
-  	static String l001300(int l00130){
+    private static String l001300(int l00130){
                 //byte[] l0013=null;
   		byte[] l0013=null;
                 //try{

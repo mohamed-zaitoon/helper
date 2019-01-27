@@ -37,13 +37,13 @@ import java.util.List;
   public final class FileUtils {
 
 
-        //public static File getApkFile(MzActivity mzActivity) throws PackageManager.NameNotFoundException{
-  	public static File getApkFile(MzActivity mzActivity) throws PackageManager.NameNotFoundException{
-                //PackageManager pm = mzActivity.getPackageManager();
-  		PackageManager pm = mzActivity.getPackageManager();
+        //public static File getApkFile(Context Context) throws PackageManager.NameNotFoundException{
+  	public static File getApkFile(Context Context) throws PackageManager.NameNotFoundException{
+                //PackageManager pm = Context.getPackageManager();
+  		PackageManager pm = Context.getPackageManager();
 
-                //ApplicationInfo ai = pm.getApplicationInfo(mzActivity.getPackageName(), 0);
-  		ApplicationInfo ai = pm.getApplicationInfo(mzActivity.getPackageName(), 0);
+                //ApplicationInfo ai = pm.getApplicationInfo(Context.getPackageName(), 0);
+  		ApplicationInfo ai = pm.getApplicationInfo(Context.getPackageName(), 0);
 
                 //File srcFile = new File(ai.publicSourceDir);
   		File srcFile = new File(ai.publicSourceDir);

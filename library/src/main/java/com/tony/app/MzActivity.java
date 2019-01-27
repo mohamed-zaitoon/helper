@@ -83,9 +83,10 @@ import java.util.List;
 
   //import java.util.function.*;
   import java.util.function.*;
-
+   import java.lang.Deprecated;
   
   //public  class MzActivity extends AppCompatActivity
+  @Deprecated
   public  class MzActivity extends AppCompatActivity 
 
   
