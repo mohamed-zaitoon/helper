@@ -24,7 +24,7 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed-zaitoon:mzlibs:3.1.7'
+ implementation 'io.github.mohamed-zaitoon:mzlibs:3.1.8'
  
 }
 ```
