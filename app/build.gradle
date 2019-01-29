@@ -52,6 +52,6 @@ compileSdkVersion 28
 dependencies {
 	implementation 'com.android.support:multidex:+'
     implementation  project(':library')
-	compile fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
  
 	}
