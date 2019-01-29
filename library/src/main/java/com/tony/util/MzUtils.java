@@ -14,9 +14,6 @@ import java.util.List;
 //import android.net.*;
   import android.net.*;
 //import android.support.annotation.*;
-  import android.support.annotation.*;
-  import android.support.v4.app.*;
-  import android.support.v4.content.*;
   import com.tony.libs.*;
   import java.io.*;
   import java.util.*;
@@ -223,22 +220,13 @@ import android.bluetooth.*;
   	public static void startVibrate(Context act, long l){
 
 
-
+		VibrationEffect g = VibrationEffect.createOneShot(l, 0);
 
                 //vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
   		vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
-                //if(ContextCompat.checkSelfPermission(act,Manifest.permission.VIBRATE) == PackageManager.PERMISSION_GRANTED){
-  		if(ContextCompat.checkSelfPermission(act,Manifest.permission.VIBRATE) == PackageManager.PERMISSION_GRANTED){
-                     //vib.vibrate(l);
-  			vib.vibrate(l);
+            vib.vibrate(g);
                 //} else {
-  			} else {
-                     
-                //}
-
-				
-				
-  			}
+  			
                 //}
   		}
 
@@ -264,25 +252,6 @@ import android.bluetooth.*;
 
             //}
   		}
-        //public static Drawable getDrawable(Context context, @DrawableRes int resId){
-  	public static Drawable getDrawable(Context context, @DrawableRes int resId){
-
-                //return ContextCompat.getDrawable(context,resId);
-  		return ContextCompat.getDrawable(context,resId);
-
-            //}
-  		}
-
-        
-        //public static int getColor(Context context, @ColorRes int resId){
-  	public static int getColor(Context context, @ColorRes int resId){
-
-                //return ContextCompat.getColor(context,resId);
-  		return ContextCompat.getColor(context,resId);
-
-            //}
-  		}
-
 
         
         //public static int getRandom(int m, int x) {
@@ -490,7 +459,7 @@ import android.bluetooth.*;
   		}
         
         //public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
-  	public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
+  	public static void showNotification(Context Context ,String title, String message,  int image){
 
                 //Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());
   		Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());  
@@ -504,7 +473,7 @@ import android.bluetooth.*;
   		if (image != 0){
 
                         //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
-  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
+  			Notification.Builder mBuilder = new Notification.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(image);
   			mBuilder.setSmallIcon(image);
@@ -535,7 +504,7 @@ import android.bluetooth.*;
   		else if( image == 0){
 
                         //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
-  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
+  			Notification.Builder mBuilder = new Notification.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
   			mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
