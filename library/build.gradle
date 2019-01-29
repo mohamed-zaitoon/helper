@@ -19,20 +19,19 @@ task writeNewPom {
     }
 }
 group='io.github.mohamed-zaitoon'
-version "3.0.8"
+version "3.0.9"
 
 android {
 
 
 
     compileSdkVersion 28
-    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1441999
-        versionName "3.0.8"
+        versionName "3.0.9"
 	   consumerProguardFiles 'proguard-user.txt'
     }
 	
