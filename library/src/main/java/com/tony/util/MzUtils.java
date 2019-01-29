@@ -14,6 +14,9 @@ import java.util.List;
 //import android.net.*;
   import android.net.*;
 //import android.support.annotation.*;
+  import android.support.annotation.*;
+  import android.support.v4.app.*;
+  import android.support.v4.content.*;
   import com.tony.libs.*;
   import java.io.*;
   import java.util.*;
@@ -36,9 +39,6 @@ import java.util.List;
   import android.media.*;
 //import com.tony.util.MzUtils.*;
   import com.tony.util.MzUtils.*;
-import android.net.wifi.*;
-import android.hardware.camera2.*;
-import android.bluetooth.*;
 
 
   //public final class MzUtils
@@ -50,57 +50,14 @@ import android.bluetooth.*;
         //private static String var;
   	private static String var;
 
-	private static BluetoothAdapter bt;
-  private static  int i = 1;
-  private static  Intent bluetoothIntent; //private static Vibrator vib;
+        //private static Vibrator vib;
   	private static Vibrator vib;
 
         //private static MediaPlayer med;
   	private static MediaPlayer med;
 
         //private static MzUtils.d ¢çµ;
-	private static c ¢çµ;
-
-	private static  WifiManager wifimanager;
-
-	private static float BackLightValue;
-
-	private static Activity mContext;
-	public static void sendEmail(Context ctx, String email, String subject, String text, String chooser){
-		Intent it = new Intent(Intent.ACTION_SEND);
-		it.putExtra(Intent.EXTRA_EMAIL, email);
-		it.putExtra(Intent.EXTRA_SUBJECT,subject);
-		it.putExtra(Intent.EXTRA_TEXT,text);
-		it.setType("message/rfc822");
-		ctx.startActivity(Intent.createChooser(it,chooser));
-		
-	}
-	public static void changeScreenBrightness(Context ctx, float fl){
-		mContext = (Activity) ctx;
-		BackLightValue = (float) fl/100;
-		WindowManager.LayoutParams layoutParams = mContext.getWindow().getAttributes();
-		layoutParams.screenBrightness = BackLightValue;
-		mContext.getWindow().setAttributes(layoutParams);
-		
-	}
-	public static void enableWiFi(Context ctx){
-        wifimanager = (WifiManager) ctx.getSystemService(Context.WIFI_SERVICE);
-        wifimanager.setWifiEnabled(true);
-    }
-    public void disableWiFi(Context ctx){
-        wifimanager = (WifiManager) ctx.getSystemService(Context.WIFI_SERVICE);
-        wifimanager.setWifiEnabled(false);
-	}
-		
-	public void enableBluetooth(Context ctx){
-
-		bluetoothIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-        ctx.startActivity(bluetoothIntent);
-    }
-    public static void disableBluetooth(){
-        bt.disable();
-    }
-	
+        private static c ¢çµ;
 	    //public static void setTimer(Context act, int i,TimerInterface t){
   	public static void setTimer(Activity act, int i,TimerInterface t){
 
@@ -220,13 +177,23 @@ import android.bluetooth.*;
   	public static void startVibrate(Context act, long l){
 
 
-		VibrationEffect g = VibrationEffect.createOneShot(l, 0);
+
 
                 //vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
   		vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
-            vib.vibrate(g);
+                //if(ContextCompat.checkSelfPermission(act,Manifest.permission.VIBRATE) == PackageManager.PERMISSION_GRANTED){
+  		if(ContextCompat.checkSelfPermission(act,Manifest.permission.VIBRATE) == PackageManager.PERMISSION_GRANTED){
+                     //vib.vibrate(l);
+  			vib.vibrate(l);
                 //} else {
-  			
+  			} else {
+                     
+                //}
+				throw new IllegalAccessError(l001224(2596) +  Manifest.permission.VIBRATE);
+
+				
+				
+  			}
                 //}
   		}
 
@@ -252,6 +219,25 @@ import android.bluetooth.*;
 
             //}
   		}
+        //public static Drawable getDrawable(Context context, @DrawableRes int resId){
+  	public static Drawable getDrawable(Context context, @DrawableRes int resId){
+
+                //return ContextCompat.getDrawable(context,resId);
+  		return ContextCompat.getDrawable(context,resId);
+
+            //}
+  		}
+
+        
+        //public static int getColor(Context context, @ColorRes int resId){
+  	public static int getColor(Context context, @ColorRes int resId){
+
+                //return ContextCompat.getColor(context,resId);
+  		return ContextCompat.getColor(context,resId);
+
+            //}
+  		}
+
 
         
         //public static int getRandom(int m, int x) {
@@ -356,31 +342,20 @@ import android.bluetooth.*;
             //}
   		}
         //public static String getBatteryLevel(Context mzAc){
- 
-	public static String getIpAddress(Context ctx){
-		WifiManager wifiManager = (WifiManager) ctx.getSystemService(ctx.WIFI_SERVICE);
-        String ipAddress = android.text.format.Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
-        return ipAddress;
-	}
-	public static Integer getBatteryLevel(Context mz){
+  	public static String getBatteryLevel(Context mzAc){
 
 
-		//BatteryManager bm = (BatteryManager)mzAc.getSystemService(mzAc.BATTERY_SERVICE);
-  		BatteryManager bm = (BatteryManager)mz.getSystemService(mz.BATTERY_SERVICE);
+                //BatteryManager bm = (BatteryManager)mzAc.getSystemService(mzAc.BATTERY_SERVICE);
+  		BatteryManager bm = (BatteryManager)mzAc.getSystemService(mzAc.BATTERY_SERVICE);
 
-		//int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
+                //int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
   		int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
 
-		//return Integer.toString(batLevel);
-  		return batLevel;
+                //return Integer.toString(batLevel);
+  		return Integer.toString(batLevel);
 
-		//}
-	}
-		
- public static boolean isDeviceCharging(Context mz){
-	 BatteryManager bm = (BatteryManager)mz.getSystemService(mz.BATTERY_SERVICE);
-	return bm.isCharging(); 
- }	
+            //}
+  		}
 
         //public static void setLocale(Context mzAc, String lang) {
   	public static void setLocale(Context mzAc, String lang) {
@@ -459,7 +434,7 @@ import android.bluetooth.*;
   		}
         
         //public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
-  	public static void showNotification(Context Context ,String title, String message,  int image){
+  	public static void showNotification(Context Context ,String title, String message, @DrawableRes int image){
 
                 //Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());
   		Intent ii =Context. getPackageManager().getLaunchIntentForPackage(Context. getPackageName());  
@@ -473,7 +448,7 @@ import android.bluetooth.*;
   		if (image != 0){
 
                         //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
-  			Notification.Builder mBuilder = new Notification.Builder(Context. getApplicationContext());
+  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(image);
   			mBuilder.setSmallIcon(image);
@@ -504,7 +479,7 @@ import android.bluetooth.*;
   		else if( image == 0){
 
                         //NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
-  			Notification.Builder mBuilder = new Notification.Builder(Context. getApplicationContext());
+  			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(Context. getApplicationContext());
 
                         //mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
   			mBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
@@ -726,28 +701,34 @@ import android.bluetooth.*;
 
                     //}}
   			}}
-			
-	public static void openFlashLight(Context ctx) {
-        CameraManager cameraManager = (CameraManager) ctx.getSystemService(Context.CAMERA_SERVICE);
-
-        try {
-            String cameraId = cameraManager.getCameraIdList()[0];
-            cameraManager.setTorchMode(cameraId, true);
-        } catch (CameraAccessException e) {
-        }
-    }
-
-    public static void closeFlashLight(Context ctx) {
-        CameraManager cameraManager = (CameraManager) ctx.getSystemService(Context.CAMERA_SERVICE);
-        try {
-            String cameraId = cameraManager.getCameraIdList()[0];
-            cameraManager.setTorchMode(cameraId, false);
-        } catch (CameraAccessException e) {
-        }
-    }
-			
 	//public static  void activateBluetooth(Context Context) {
-      //static String l001321(int l001320){
+  	public static  void activateBluetooth(Context Context) {
+		//if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+  		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+		//|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
+  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
+
+			//Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
+  			Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
+
+			//Context.startActivity(intent);
+  			Context.startActivity(intent);
+	//} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
+  			} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
+				 //|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
+  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
+		   
+              //throw new IllegalAccessError("PERMISSION_DENIED ,,," +  Manifest.permission.BLUETOOTH +" & " + Manifest.permission.BLUETOOTH_ADMIN);
+  			throw new IllegalAccessError(l001224(2596) +  Manifest.permission.BLUETOOTH +l001224(2607) + Manifest.permission.BLUETOOTH_ADMIN);
+                     
+                     
+                     
+              //}
+  			}
+
+	//}
+  		}
+        //static String l001321(int l001320){
   	private static String l001321(int l001320){
 
                 //byte[] l00132=null;

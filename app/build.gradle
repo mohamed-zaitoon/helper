@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+compileSdkVersion 28
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.mycompany.myapp2"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+		multiDexEnabled false
+        versionName "1.0"
+    }
+	
+	
+    signingConfigs {
+        debug {
+            storeFile file("demo.jks")
+            storePassword "android"
+            keyAlias "android"
+            keyPassword "android"
+        }
+
+        release {
+            storeFile file("demo.jks")
+            storePassword "android"
+            keyAlias "android"
+            keyPassword "android"
+        }
+    }
+
+	
+    buildTypes {
+		      debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+        release {
+		
+			signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+	implementation 'com.android.support:multidex:+'
+    implementation  project(':library')
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+ 
+	}
