@@ -2,7 +2,6 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs/3.0.7)
 
 
 An Android library that provides most of used in one Class.
