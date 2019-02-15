@@ -66,7 +66,7 @@ package com.example.app;
 -keep public class com.tony.** { *;}
 -keepclassmembers interface com.tony.** {*;}
 -keep public interface com.tony.** {*;}
- ## License 
+ ## License  
 ```
 ```txt
    Copyright 2019 Tony, Inc. 
