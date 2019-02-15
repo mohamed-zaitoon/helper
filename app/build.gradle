@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-compileSdkVersion 27
+compileSdkVersion 28
 
     defaultConfig {
         applicationId "com.mycompany.myapp2"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
 		multiDexEnabled false
         versionName "1.0"
