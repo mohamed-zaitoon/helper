@@ -24,7 +24,7 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed-zaitoon:mzlibs:4.1.3'
+ implementation 'io.github.mohamed-zaitoon:mzlibs:4.2.0'
  
 }
 ```
@@ -69,7 +69,7 @@ package com.example.app;
  
 ```
 
- ## License 
+## License 
 ```txt
    Copyright 2019 Tony, Inc. 
 
