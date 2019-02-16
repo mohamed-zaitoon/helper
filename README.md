@@ -28,38 +28,10 @@ dependencies {
  
 }
 ```
+## Tutorial
+ For Tutorial Visit:
+ [Docs](https://mohamed-zaitoon.github.io/mzlibs/docs)
 
-## Quick Tutorial
-
-If you want to make timer or show toast you need to add most of code in your class.
-or you can make `MainActivity` class, extends  `Activity` class:
-```java
-package com.example.app;
-   
-   
-   import android.os.Bundle.
-   
-   import com.tony.util.*;
-   
-   import com.tony.interfaces.*;
-   
-   public class MainActivity extends Activity implements TimerInterface {
-   
-       @Override
-       portected void onCreate(Bundle bundle){
-          super.onCreate(bundle);
-          MzUtils.setTimer(this,6000,this);
-           
-       }
-       
-   // you must add this
-   @Override 
-   public void startTimer {
-      MzUtils.showMessage(getApplicationContext(),"Hello Man"); // this Toast message will be show after minute 
-   }
-   }
- ``` 
- 
  In progaurd-rules.pro add this lines:
  ```txt
 -keepclassmembers class com.tony.** {*; }

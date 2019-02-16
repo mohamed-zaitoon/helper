@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' manifest="cache/index.appcache">
+  <head itemscope='itemscope' itemtype='http://schema.org/WebSite'>
+	<meta charset="UTF-8">
+	<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+	<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/vs.css">
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/w3codecolors.js"></script>
+	<script type="text/javascript" src="js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+	</head>
+  <body style="font-size:25px;" dir="ltr">
+
+	<p style="font-size:25px;">If you want to make splash screen use MzUtils.setTimer(Activity activity, int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class SplashActivity extends Activity implements TimerInterface {
+		
+@Override
+public void startTimer(){
+Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+startActivity(intent);
+}
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_splash);
+MzUtils.setTimer(this, 500, this);
+}
+}
+	  </code>
+	</pre>
+
+	<p style="font-size:25px;">If you want to make app do thing every 500 ms, 1s or 1m .. etc use MzUtils.setTimerForEver(Activity activity, int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity implements TimerInterface {
+
+@Override
+public void startTimer(){
+Log.d("MainActivity", "Done");
+		}
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.setTimerForEver(this, 1000, this);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to make app play music use startMedia(Context context, int mediaId);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.startMedia(this, R.raw.song);
+// If you want stop use stopMedia();
+}
+
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to Decode from Base64 use MzUtils.decode(String base64);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+Log.d("MainActivity:", MzUtils.decode("WW91ciBhcmUgQ29vbA==");
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to Encode to Base64 use MzUtils.encode(String string);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+Log.d("MainActivity:", MzUtils.decode("Android Is Best");
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to make device vibrate use MzUtils.startVibrate(Context context, long vibrate_long);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code xml">
+&lt;uses-permission android:name="android.permission.VIBRATE "/>
+	  </code>
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.startVibrate(this, 1000);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to get Location Y for View use MzUtils.getLocationY(android.view.View view);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+LinearLayout linear = findViewById(R.id.mContent);
+int locY = MzUtils.getLocationY(linear);
+Log.d("MainActivity", /*To convert int to String*/ MzUtils.getString(this, locY));
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to get Drawable in old version of Android use MzUtils.getDrawable(Context context, int resId);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+ImageView iv = findViewById(R.id.myIv);
+Drawable dr = MzUtils.getDrawable(this, R.drawable.mDr);
+iv.setImageDrawable(dr);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:25px;">If you want to get Color in old version of Android use MzUtils.getColor(Context context, int resId);</p>
+	<p style="font-size:25px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+TextView tv = findViewById(R.id.myTv);
+int mColor = MzUtils.getColor(this, R.color.myColor);
+tv.setTextColor(mColor);
+}
+}
+	  </code>
+	</pre>
+	
+	<footer style="font-size:16px;" id="footer">Copyright &copy; 2018-$$$$ Tony Software.</footer>
+	
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/w3codecolors.js"></script>
+	<script type="text/javascript" src="js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+  <!--Created by Mohamed Zaitoon-->
+  </html>
+
+
+
