@@ -49,7 +49,7 @@ compileSdkVersion 28
 }
 
 dependencies {
-	implementation 'com.android.support:multidex:+'
+	implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation  project(':library')
 	compile fileTree(dir: 'libs', include: ['*.jar'])
  

@@ -1,0 +1,37 @@
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:gravity="center" 
+	android:orientation="vertical"
+	android:id="@+id/error" 
+	android:visibility="gone" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ImageView 
+		android:layout_gravity="center" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_margin="8.0dip"
+		app:srcCompat="@raw/error" />
+	<TextView
+		android:textColor="@color/text_color"
+		android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="8.0dip"
+		android:text="@string/no_internet" />
+	<Button 
+		android:textColor="@color/text_color" 
+		android:layout_gravity="center" 
+		android:background="@drawable/rtry_button_background" 
+		android:layout_width="150.0dip" 
+		android:layout_height="wrap_content" 
+		android:layout_margin="8.0dip" 
+		android:text="@string/btn_rtry" 
+		android:onClick="reload"
+		android:textAllCaps="false"
+		android:fontFamily="casual"
+		style="@style/Widget.AppCompat.Button.Borderless"
+		/>
+</LinearLayout>

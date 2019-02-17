@@ -1,171 +1,128 @@
 /* Created by Mohamed Zaitoon */
 
 package com.mycompany.myapp2;
-import java.util.List;
-import android.content.*;
-import android.net.*;
-import android.os.*;
-import android.support.v4.content.*;
-import android.util.*;
-import android.widget.*;
 
-import java.io.*;
-import java.util.*;
-import com.tony.util.*;
-import android.content.pm.PackageManager.*;
-import android.content.pm.*;
-import android.webkit.*;
-import com.tony.interfaces.*;
-import android.support.v4.text.*;
-import java.lang.annotation.*;
 import android.app.*;
+import android.os.*;
+import android.view.*;
+import android.view.View.*;
+import android.widget.*;
+import android.content.*;
+import android.graphics.*;
+import android.media.*;
+import android.net.*;
+import android.text.*;
+import android.util.*;
+import android.webkit.*;
+import android.animation.*;
+import android.view.animation.*;
+import java.util.*;
+import java.text.*;
+import android.support.v7.app.AppCompatActivity;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
+import android.annotation.*;
+public class MainActivity extends AppCompatActivity {
 
 
-  public class MainActivity extends Activity implements TimerInterface
-	
-{
+	private WebView webview1;
 
-	private double random = 0;
+	private ProgressDialog pD;
 
-	private TextView tv;
-
-	private static String str;
-
-	
-  	@Override
-  	protected void onCreate(Bundle savedInstanceState)
-    
-  	{
-	  
-  		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-        
-        tv = findViewById(R.id.mainTextView);
-        MzUtils.setTimer(this, 450, this);
-      //  MzUtils.startVibrate(this, 1000);
-      //  tv.setText(MzUtils.getDeviceLanguage());
-       /* if(MzUtils.isRooted()){
-            tv.setText("Rooted");
-        }*/
-        //tv.setText(MzUtils.getCountryCode(this));
-        
-        //MzUtils.launchApp(this, "com.android.vending");
-       // MzUtils.openUrl(this, "goo.gle");
-        
-  /*      try {
-        Intent share = new Intent();
-
-        share.setAction(Intent.ACTION_SEND);
-
-        share.setType("application/vnd.android.package-archive");
-
-        share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(FileUtils.getApkFile(this)));
-
-        startActivity(Intent.createChooser(share, getString(com.tony.libs.R.string.abc_activitychooserview_choose_application)));
-     }
-     catch (PackageManager.NameNotFoundException pm){
-            
-        }*/
-        //MzUtils.activateBluetooth(this);
-      /*  
-        if(MzUtils.isConnected(this)){
-            showMessage("isConntected ,, true");
-        } else {
-            
-                showMessage("isConntected ,, false");
-        }
-        
-        */
-        
-        /*
-        @Deprecated all this: 
-		setTimer(6000,this);
-		blockScreenShot(); // To block ScreenShots
-		/* If You using webview and load html file from asset or raw you can use this code:
-		 * String assetUrl = getHtmlAsset("path/example.html"); this is replace of "file:///android_asset/path/example.html"
-		 * or
-		 * assetUrl = getHtmlRaw("example.html"); this is replace of "file:///android_res/raw/example.html"
-		 * WebView mWeb = new WebView(this);
-		 * or
-		 * WebView mWeb = findViewById(R.id.mWeb);
-		 * mWeb.loadUrl(assetUrl);
-		 *
-
-		setLocale("en-US"); //force English in app 
-		/* If You want to make button or menu item to share apk file you can use this code:
-		 * shareApkFile();
-		 *
-		 
-		 double ran = getRandom(1, 23); // ran will be random from 1 : 23
-		 this.random = ran;
-		/* If you want to read file from asset endswith .txt you need most of code or you can use this:
-		 * String txt = reedAsset("some.txt");
-		 * TextView tv = new TextView(this);
-		 * or
-		 * TextView tv = findViewById(R.id.tv);
-		 * tv.setText(txt);
-		 *
-		 if(isConnected()){
-			 Log.e("Device:", "is connected");
-		 } else if(!isConnected()){
-
-			 Log.e("Device:", "not connected");
-		 } //Check If Connect
-			
-		if(isRooted()){
-			Log.e("Device:", "is rooted");
-		} else if(!isRooted()){
-
-			Log.e("Device:", "not rooted");
-		} //Check If Rooted
-		showNotification("Notification", "Some Notification", R.drawable.ic_launcher);
-		/* If you want to load Image from drawable or mipmap to ImageView you must use thie code:
-		 * Drawable d = getDrawable(this, R.drawable.d);
-		 * ImageView im = new ImageView(this)
-		 * or
-		 * ImageView im = findViewById(R.id.im);
-		 * im.setImageDrawable(d);
-		 */
-		 /* Some other code f
-		  * int color = getColor(this, R.color.m_color);
-		  * String version_name = getVersionName();
-		  * String version_code = getVersionCode();
-		  
-		  startVibrate(must be >= ); // To make vibration need to 
-		
-		//throw new IllegalAccessError();
-		
-
-	}
-
-
-	private TextView getTextView2(int mainTextView2)
-	{
-		// TODO: Implement this method
-		return (TextView) findViewById(R.id.mainTextView2);
-	}
-
-
-	private TextView getTextView(int mainLinearLayout)
-	{
-		// TODO: Implement this method
-		return (TextView) findViewById(R.id.mainTextView);
-	}
-*/
-
-}
+	private LinearLayout mErr;
 	@Override
-	public void startTimer()
+	protected void onCreate(Bundle _savedInstanceState) {
+		super.onCreate(_savedInstanceState);
+		setContentView(R.layout.mzlibs);
+		initialize(_savedInstanceState);
+	}
+
+	private void initialize(Bundle _savedInstanceState) {
+
+		webview1 = (WebView) findViewById(R.id.activity_main_webview);
+	    mErr = (LinearLayout) findViewById(R.id.error);
+		pD = new ProgressDialog(this);
+		webview1.getSettings().setJavaScriptEnabled(true);
+		webview1.getSettings().setSupportZoom(true);
+		webview1.getSettings().setLoadWithOverviewMode(true);
+		webview1.getSettings().setUseWideViewPort(true);
+		webview1.getSettings().setDomStorageEnabled(true);
+		webview1.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
+		webview1.setWebChromeClient(new WebChromeClient());
+
+		webview1.loadUrl("http://192.168.43.1:6540");
+	    pD.setTitle("");
+		pD.setMessage("Loading please wait..");
+	    pD.setCancelable(false);
+
+		webview1.setWebViewClient(new WebViewClient() {
+				@Override
+				public void onPageStarted(WebView _param1, String _param2, Bitmap _param3) {
+
+					super.onPageStarted(_param1, _param2, _param3);
+					pD.show();
+				}
+
+				@Override
+				public void onPageFinished(WebView _param1, String _param2) {
+
+					super.onPageFinished(_param1, _param2);
+					if(pD.isShowing()){
+						pD.dismiss();
+					}
+				}
+
+				@Override
+				@TargetApi(21)
+				public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest webResourceRequest) {
+					return shouldOverrideUrlLoading(webView, webView.getUrl());
+				}
+
+
+			    @SuppressWarnings("deprecation")
+				@Override
+				public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
+					if (Uri.parse(url).getHost().equals("mohamed-zaitoon.github.io")){
+						return false;
+					}
+
+					Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+					view.getContext().startActivity(intent);
+					return true;
+				}
+
+				@Override
+				@TargetApi(21)
+				public void onReceivedError(WebView webView, WebResourceRequest webResourceRequest, WebResourceError webResourceError) {
+					onReceivedError(webView, webResourceError.getErrorCode(), webResourceError.getDescription().toString(), webResourceRequest.getUrl().toString());
+				}
+
+				@Override
+			    @SuppressWarnings("deprecation")
+				public void onReceivedError(WebView webView, int i, String str, String str2) {
+					webview1.setVisibility(View.GONE);
+				    mErr.setVisibility(View.VISIBLE);
+					if(pD.isShowing()){
+						pD.dismiss();
+					}
+				}
+
+
+			});
+	}
+
+	@Override
+	public void onBackPressed()
 	{
-		//openUrl("https://mohamed-zaitoon.github.io");
-		MzUtils.showMessage(this,MzUtils.encode("Hello")); // Toast with base64 text from this 
-		
-		//launchApp("com.barmej.android");
-		}
+		// TODO: Implement this method
+		super.onBackPressed();
+	}
 
+	public void reload(View v){
+		webview1.setVisibility(View.VISIBLE);
+		mErr.setVisibility(View.GONE);
+		webview1.reload();
+	}
 
-
-		
 }
-
-  

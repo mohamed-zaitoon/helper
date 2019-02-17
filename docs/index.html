@@ -14,13 +14,13 @@
 	  <!-- Global site tag (gtag.js) - Google Analytics -->
 
 	</head>
-  <body style="font-size:25px;" dir="ltr">
+  <body style="font-size:15px;" dir="ltr">
 
-	<p style="font-size:25px;">If you want to make splash screen use MzUtils.setTimer(Activity activity, int milliseconds, TimerInterface timerInterface);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to make splash screen use<br>MzUtils.setTimer(Activity activity,<br>int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
-public class SplashActivity extends Activity implements TimerInterface {
+public class SplashActivity extends Activity<br> implements TimerInterface {
 		
 @Override
 public void startTimer(){
@@ -38,11 +38,11 @@ MzUtils.setTimer(this, 500, this);
 	  </code>
 	</pre>
 
-	<p style="font-size:25px;">If you want to make app do thing every 500 ms, 1s or 1m .. etc use MzUtils.setTimerForEver(Activity activity, int milliseconds, TimerInterface timerInterface);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to make app do thing every 500 ms, 1s or 1m .. etc use MzUtils.setTimerForEver(Activity activity,<br> int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
-public class MainActivity extends Activity implements TimerInterface {
+public class MainActivity extends Activity<br> implements TimerInterface {
 
 @Override
 public void startTimer(){
@@ -58,8 +58,8 @@ MzUtils.setTimerForEver(this, 1000, this);
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to make app play music use startMedia(Context context, int mediaId);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to make app play music use startMedia(Context context, int mediaId);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -76,8 +76,8 @@ MzUtils.startMedia(this, R.raw.song);
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to Decode from Base64 use MzUtils.decode(String base64);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to Decode from Base64 use MzUtils.decode(String base64);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -92,8 +92,8 @@ Log.d("MainActivity:", MzUtils.decode("WW91ciBhcmUgQ29vbA==");
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to Encode to Base64 use MzUtils.encode(String string);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to Encode to Base64 use MzUtils.encode(String string);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -108,8 +108,8 @@ Log.d("MainActivity:", MzUtils.decode("Android Is Best");
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to make device vibrate use MzUtils.startVibrate(Context context, long vibrate_long);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to make device vibrate use MzUtils.startVibrate(Context context, long vibrate_long);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code xml">
 &lt;uses-permission android:name="android.permission.VIBRATE "/>
@@ -126,8 +126,8 @@ MzUtils.startVibrate(this, 1000);
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to get Location Y for View use MzUtils.getLocationY(android.view.View view);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to get Location Y for View use MzUtils.getLocationY(View view);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -144,8 +144,9 @@ Log.d("MainActivity", /*To convert int to String*/ MzUtils.getString(this, locY)
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to get Drawable in old version of Android use MzUtils.getDrawable(Context context, int resId);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+
+	<p style="font-size:15px;">If you want to get Location X for View use MzUtils.getLocationX(View view);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -155,15 +156,15 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-ImageView iv = findViewById(R.id.myIv);
-Drawable dr = MzUtils.getDrawable(this, R.drawable.mDr);
-iv.setImageDrawable(dr);
+LinearLayout linear = findViewById(R.id.mContent);
+int locX = MzUtils.getLocationX(linear);
+Log.d("MainActivity", MzUtils.getString(this, locX));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:25px;">If you want to get Color in old version of Android use MzUtils.getColor(Context context, int resId);</p>
-	<p style="font-size:25px;"> Example Code: </p>
+	<p style="font-size:15px;">If you want to get Random from X to Y use MzUtils.getRandom(int x, int y);</p>
+	<p style="font-size:15px;"> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java">
 public class MainActivity extends Activity {
@@ -173,15 +174,317 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-TextView tv = findViewById(R.id.myTv);
-int mColor = MzUtils.getColor(this, R.color.myColor);
-tv.setTextColor(mColor);
+int ran = MzUtils.getRandom(0,9);
+Log.d("MainActivty", MzUtils.getString(this, ran));
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Dip from X use MzUtils.getDip(Context context, int X);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+float f = MzUtils.getDip(this, 10);
+int i = (int) f;
+Log.d("MainActivity", MzUtils.getString(this, i));
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Display Width Pixels use MzUtils.getDisplayWidthPixels(Context context);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+int width = MzUtils.getDisplayWidthPixels(this);
+Log.d("MainActivity", MzUtils.getString(this, width));
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Display Height Pixels use MzUtils.getDisplayHeightPixels(Context context);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+int height = MzUtils.getDisplayHeightPixels(this);
+Log.d("MainActivity", MzUtils.getString(this, height));
+		}
+		}
+	  </code>
+	</pre>
+<p style="font-size:15px;">If you want to block Screen Shot in your app use MzUtils.blockScreenShot(Activity activity);</p>
+<p style="font-size:15px;"> Example Code: </p>
+<pre class="w3-container w3-light-grey w3-border">
+<code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.blockScreenShot(this);
+}
+}
+	  </code>
+	</pre>
+<p style="font-size:15px;">If you want to get Battery Level use MzUtils.getBatteryLevel(Context context);</p>
+<p style="font-size:15px;"> Example Code: </p>
+<pre class="w3-container w3-light-grey w3-border">
+<code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+int batLevel = MzUtils.getBatteryLevel(this);
+Log.d("MainActivity", Integer.toString(batLevel));
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to force Language in your app use MzUtils.setLocale(Context context, String langCode);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.setLocale("ar");
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to show Notification use MzUtils.showNotification(Context context, String title, String message,@Drawable int resId);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.showNotification(this, "Android", "MainActivity" , R.drawable.ic_noti);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Device Language use MzUtils.getDeviceLanguage();</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+String dLang = MzUtils.getDeviceLanguage();
+Log.d("MainActivity", dLang);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to check if Device is Rooted use MzUtils.isRooted();</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+if (MzUtils.isRooted()){
+  Log.d("MainActivity", "Device is Rooted");
+} else {
+  Log.d("MainActivity", "Device not Rooted");
+}
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Country Code use MzUtils.getCountryCode(Context context);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+String code = MzUtils.getCountryCode(this);
+Log.d("MainActivity", code);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to launch App use MzUtils.launchApp(Context context, String packageName);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.launchApp(this, "com.google.android.gm");
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to launch App use MzUtils.openUrl(Context context, String url, String chooser);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+MzUtils.openUrl(this, "https://mohamed-zaitoon.github.io", "Choose App");
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to check if Device is Connected to internet use MzUtils.isConnected(Context context);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+if (MzUtils.isConnected(this)){
+Log.d("MainActivity", "Device is Connected to Internet");
+} else {
+Log.d("MainActivity", "Device not Connected to Internet");
+}
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get VersionName for any app use PackagesUtils.getVersionName(Context context, String packageName);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+String verName = PackagesUtils.getVersionName(this, "com.android.chrome");
+Log.d("MainActivity", verName);
+}
+}
+	  </code>
+	</pre>
+<p style="font-size:15px;">If you want to get VersionCode for any app use PackagesUtils.getVersionName(Context context, String packageName);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+String verName = PackagesUtils.getVersionCode(this, "com.android.chrome");
+Log.d("MainActivity", verName);
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to check if any app is App Enabled or not use PackagesUtils.isAppEnabled(Context context, String packageName);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+if (PackagesUtils.isAppEnabled(this, "com.example")){
+Log.d("MainActivity", "App is Installed & Enabled");
+} else {
+Log.d("MainActivity", "App not Enabled or not Installed");
+}	
+}
+}
+	  </code>
+	</pre>
+	<p style="font-size:15px;">If you want to get Apk File for any app use PackagesUtils.getApkFile(Context context, String packageName);</p>
+	<p style="font-size:15px;"> Example Code: </p>
+	<pre class="w3-container w3-light-grey w3-border">
+	  <code class="w3-code java">
+public class MainActivity extends Activity {
+
+
+@Override
+protected void onCreate(Bundle bundle){
+super.onCreate(bundle);
+setContentView(R.id.activity_main);
+File f = PackagesUtils.getApkFile(this, "com.google.android.gms");
+try {
+Intent share = new Intent();
+share.setAction(Intent.ACTION_SEND);
+share.setType("application/vnd.android.package-archive");
+share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(f));
+startActivity(Intent.createChooser(share, "Choose App"));
+}
+catch (PackageManager.NameNotFoundException pm){
+
+}
 }
 }
 	  </code>
 	</pre>
 	
-	<footer style="font-size:16px;" id="footer">Copyright &copy; 2018-$$$$ Tony Software.</footer>
+	<footer style="font-size:16px;" id="footer">Copyright &copy; 2018-$$$$ Tony, Inc.</footer>
 	
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<script type="text/javascript" src="js/w3codecolors.js"></script>

@@ -29,60 +29,34 @@ import java.util.List;
 
   //import android.os.*;
   import android.os.*;
+import java.io.*;
 
   //public final class PackagesUtils
   public final class PackagesUtils
   
   //{
-  {
+{
+
+	private static boolean b = false;
 
 
   	
-  	//private static boolean b = false;
-  	private static boolean b = false;
+        //public static File getApkFile(Context Context) throws PackageManager.NameNotFoundException{
+  	public static File getApkFile(Context Context, String str) throws PackageManager.NameNotFoundException{
+                //PackageManager pm = Context.getPackageManager();
+  		PackageManager pm = Context.getPackageManager();
+
+                //ApplicationInfo ai = pm.getApplicationInfo(Context.getPackageName(), 0);
+  		ApplicationInfo ai = pm.getApplicationInfo(str, 0);
+
+                //File srcFile = new File(ai.publicSourceDir);
+  		File srcFile = new File(ai.publicSourceDir);
 
 
-	
-  	//private static Bundle bundle;
-  	private static Bundle bundle;
-	
-  	//public static String getMetaData(Context mz, String pg, String meta){
-  	public static String getMetaData(Context mz, String pg, String meta){
-
-		
-  		//try {
-  		try {
-				
-  			//bundle =  mz.getPackageManager().getApplicationInfo(pg, 128).metaData;
-  			bundle =  mz.getPackageManager().getApplicationInfo(pg, 128).metaData;
-			
-  			//}
-  			}
-			
-  		//catch (PackageManager.NameNotFoundException e)
-  		catch (PackageManager.NameNotFoundException e)
-			
-  		//{}
-  		{}
-        
- 
-  		//catch (NullPointerException e)
-  		catch (NullPointerException e)
- 
-  		//{
-  		{
-         
-			
-		
-  			//}
-  			}
-		
-  		//return bundle.getString(meta, l000433(197));
-  		return bundle.getString(meta, l000030(197));
-	
-  		//}
+                //return srcFile;
+  		return srcFile;
+            //}
   		}
-	
 	
   	//public static String getVersionCode(Context mz, String pg){
   	public static String getVersionCode(Context mz, String pg){

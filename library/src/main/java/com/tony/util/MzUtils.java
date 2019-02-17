@@ -2,43 +2,21 @@
 bgteam.assitant@outlook.com
 \com.tony.util*/
 package com.tony.util;
-import java.util.List;
-//import android.*;
-  import android.*;
-//import android.app.*;
-  import android.app.*;
-//import android.content.*;
-  import android.content.*;
-//import android.content.pm.*;
-  import android.content.pm.*;
-//import android.net.*;
-  import android.net.*;
-//import android.support.annotation.*;
-  import android.support.annotation.*;
-  import android.support.v4.app.*;
-  import android.support.v4.content.*;
-  import com.tony.libs.*;
-  import java.io.*;
-  import java.util.*;
-  import com.tony.libs.R;
-//import android.view.*;
-  import android.view.*;
-//import android.widget.*;
-  import android.widget.*;
-//import android.content.res.*;
-  import android.content.res.*;
-//import android.util.*;
-  import android.util.*;
-//import android.os.*;
-  import android.os.*;
-//import android.graphics.drawable.*;
-  import android.graphics.drawable.*;
-//import com.tony.interfaces.*;
-  import com.tony.interfaces.*;
-//import android.media.*;
-  import android.media.*;
-//import com.tony.util.MzUtils.*;
-  import com.tony.util.MzUtils.*;
+import android.*;
+import android.app.*;
+import android.content.*;
+import android.content.pm.*;
+import android.content.res.*;
+import android.media.*;
+import android.net.*;
+import android.os.*;
+import android.support.annotation.*;
+import android.support.v4.app.*;
+import android.support.v4.content.*;
+import android.util.*;
+import android.view.*;
+import com.tony.interfaces.*;
+import java.util.*;
 
 
   //public final class MzUtils
@@ -219,25 +197,6 @@ import java.util.List;
 
             //}
   		}
-        //public static Drawable getDrawable(Context context, @DrawableRes int resId){
-  	public static Drawable getDrawable(Context context, @DrawableRes int resId){
-
-                //return ContextCompat.getDrawable(context,resId);
-  		return ContextCompat.getDrawable(context,resId);
-
-            //}
-  		}
-
-        
-        //public static int getColor(Context context, @ColorRes int resId){
-  	public static int getColor(Context context, @ColorRes int resId){
-
-                //return ContextCompat.getColor(context,resId);
-  		return ContextCompat.getColor(context,resId);
-
-            //}
-  		}
-
 
         
         //public static int getRandom(int m, int x) {
@@ -250,43 +209,6 @@ import java.util.List;
 
                 //return random.nextInt(x - m + 1) + m;
   		return random.nextInt(x - m + 1) + m;
-
-
-            //}
-  		}
-
-        //public static ArrayList<Double> getCheckedItemPositionsToArray(ListView l) {
-  	public static ArrayList<Double> getCheckedItemPositionsToArray(ListView l) {
-
-
-                //ArrayList<Double> ¢ø = new ArrayList<Double>();
-  		ArrayList<Double> ¢ø = new ArrayList<Double>();
-
-
-                //SparseBooleanArray ¢ø¢ = l.getCheckedItemPositions();
-  		SparseBooleanArray ¢ø¢ = l.getCheckedItemPositions();
-
-
-
-                //for (int ¢ø£ = 0; ¢ø£ < ¢ø¢.size(); ¢ø£++) {
-  		for (int ¢ø£ = 0; ¢ø£ < ¢ø¢.size(); ¢ø£++) {
-
-
-
-                        //if (¢ø¢.valueAt(¢ø£))
-  			if (¢ø¢.valueAt(¢ø£))
-
-
-                            //¢ø.add((double)¢ø¢.keyAt(¢ø£));
-  			¢ø.add((double)¢ø¢.keyAt(¢ø£));
-
-
-                    //}
-  			}
-
-
-                //return ¢ø;
-  		return ¢ø;
 
 
             //}
@@ -333,7 +255,7 @@ import java.util.List;
         
         
         //public static void blockScreenShot(Context mz){
-  	public static void blockScreenShot(Activity mz){
+  	public static void blockScreenShot(Context mz){
 
 
                 //mz.getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -342,7 +264,7 @@ import java.util.List;
             //}
   		}
         //public static String getBatteryLevel(Context mzAc){
-  	public static String getBatteryLevel(Context mzAc){
+  	public static int getBatteryLevel(Context mzAc){
 
 
                 //BatteryManager bm = (BatteryManager)mzAc.getSystemService(mzAc.BATTERY_SERVICE);
@@ -352,7 +274,7 @@ import java.util.List;
   		int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
 
                 //return Integer.toString(batLevel);
-  		return Integer.toString(batLevel);
+  		return batLevel;
 
             //}
   		}
@@ -382,36 +304,6 @@ import java.util.List;
 
             //}
   		} 
-
-        //public static void showMessage(Context mzAct, String s) {
-  	public static void showMessage(Context mzAct, String s) {
-
-
-                //Toast.makeText(mzAct.getApplicationContext(), s, Toast.LENGTH_LONG).show();
-  		Toast.makeText(mzAct.getApplicationContext(), s, Toast.LENGTH_LONG).show();
-
-
-            //}
-  		}
-        //public static String getString(Double d){
-  	public static String getString(Double d){
-
-
-                //return Double.toString(d);
-  		return Double.toString(d);
-
-            //}
-  		}
-
-        //public static String getString(int d){
-  	public static String getString(int d){
-
-
-                //return Integer.toString(d);
-  		return Integer.toString(d);
-
-            //}
-  		}
 
 
         //public static int getLocationX(View v) {
@@ -701,34 +593,7 @@ import java.util.List;
 
                     //}}
   			}}
-	//public static  void activateBluetooth(Context Context) {
-  	public static  void activateBluetooth(Context Context) {
-		//if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
-  		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
-		//|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
-  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_GRANTED){
-
-			//Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
-  			Intent intent = new Intent(android.bluetooth.BluetoothAdapter.ACTION_REQUEST_ENABLE);
-
-			//Context.startActivity(intent);
-  			Context.startActivity(intent);
-	//} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
-  			} else 		if (ContextCompat.checkSelfPermission(Context,Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_DENIED
-				 //|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
-  		|| ContextCompat.checkSelfPermission(Context, Manifest.permission.BLUETOOTH_ADMIN) == PackageManager.PERMISSION_DENIED){
-		   
-              //throw new IllegalAccessError("PERMISSION_DENIED ,,," +  Manifest.permission.BLUETOOTH +" & " + Manifest.permission.BLUETOOTH_ADMIN);
-  			throw new IllegalAccessError(l001224(2596) +  Manifest.permission.BLUETOOTH +l001224(2607) + Manifest.permission.BLUETOOTH_ADMIN);
-                     
-                     
-                     
-              //}
-  			}
-
-	//}
-  		}
-        //static String l001321(int l001320){
+	        //static String l001321(int l001320){
   	private static String l001321(int l001320){
 
                 //byte[] l00132=null;

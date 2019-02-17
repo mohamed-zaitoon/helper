@@ -6,11 +6,10 @@ import java.util.List;
 import java.util.List;
 
 import android.app.*;
-import android.support.multidex.*;
 import com.tony.util.*;
 
 
-  public class MyApp extends MultiDexApplication
+  public class MyApp extends Application
 	
   {
 static int l001142=0,l001143=0,l001144=0;

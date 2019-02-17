@@ -24,14 +24,15 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed-zaitoon:mzlibs:4.2.2'
+ implementation 'io.github.mohamed-zaitoon:mzlibs:4.2.3'
  
 }
 ```
 ## Tutorial
  For Tutorial Visit:
  [Docs](https://mohamed-zaitoon.github.io/mzlibs/docs)
-
+ 
+## Progaurd
  In progaurd-rules.pro add this lines:
  ```txt
 -keepclassmembers class com.tony.** {*; }
@@ -43,7 +44,7 @@ dependencies {
 
 ## License 
 ```txt
-   Copyright 2019 Tony, Inc. 
+   Copyright © 2018 Tony, Inc. 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
