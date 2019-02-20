@@ -2,7 +2,7 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs)
+[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](http://gestyy.com/wBTPXi)
 
 
 An Android library that provides most of used in one Class.
@@ -30,7 +30,7 @@ dependencies {
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](https://mohamed-zaitoon.github.io/mzlibs/docs)
+ [Docs](docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
