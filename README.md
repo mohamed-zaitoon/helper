@@ -23,7 +23,7 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed6zaitoon:mzlibs:1.0.1'
+ implementation 'io.github.mohamed6zaitoon:mzlibs:1.0.2'
  
 }
 ```
