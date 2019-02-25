@@ -2,7 +2,7 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs)
+[![](https://jitpack.io/v/io.github.mohamed6zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed6zaitoon/mzlibs)
 
 An Android library that provides most of used in one Class.
 
@@ -23,7 +23,7 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed-zaitoon:mzlibs:4.2.3'
+ implementation 'io.github.mohamed6zaitoon:mzlibs:4.2.3'
  
 }
 ```
