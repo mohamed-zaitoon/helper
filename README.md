@@ -23,7 +23,7 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed6zaitoon:mzlibs:1.0.2'
+ implementation 'io.github.mohamed-zaitoon:mzlibs:1.0.2'
  
 }
 ```
@@ -45,7 +45,7 @@ dependencies {
 ```txt
   MIT License
 
-Copyright (c) 2019 Mohamed Zaitoon
+Copyright (c) 2019 Tony, Inc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
