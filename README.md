@@ -2,7 +2,7 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzlibs)
+[![](https://jitpack.io/v/tk.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzlibs)
 
 An Android library that provides most of used in one Class.
 
@@ -23,13 +23,13 @@ repositories {
 dependencies {
 
 
- implementation 'io.github.mohamed-zaitoon:mzlibs:1.0.2'
+ implementation 'tk.mohamed-zaitoon:mzlibs:1.0.2'
  
 }
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](https://mohamed-zaitoon.github.io/mzlibs/docs)
+ [Docs](/docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
