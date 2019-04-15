@@ -29,7 +29,7 @@ dependencies {
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](/docs)
+ [Docs](/mzlibs/docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
@@ -45,7 +45,7 @@ dependencies {
 ```txt
   MIT License
 
-Copyright (c) 2019 Tony, Inc
+Copyright (c) 2019 Mohamed Zaitoon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
