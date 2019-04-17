@@ -1,8 +1,4 @@
-
-# mzlibs
-
-
-[![](https://jitpack.io/v/tk.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzhelper)
+![](https://jitpack.io/v/tk.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzhelper)
 
 An Android library that provides most of used in one Class.
 
@@ -29,7 +25,7 @@ dependencies {
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](/mzlibs/docs)
+ [Docs](https://www.mohamed-zaitoon.tk/mzhelper/docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
