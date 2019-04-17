@@ -1,4 +1,5 @@
 [![](https://jitpack.io/v/tk.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzhelper)
+
 An Android library that provides most of used in one Class.
 
 
@@ -18,7 +19,7 @@ repositories {
 dependencies {
 
 
- implementation 'tk.mohamed-zaitoon:mzhelper:1.0.4'
+ implementation 'tk.mohamed-zaitoon:mzhelper:1.0'
  
 }
 ```
