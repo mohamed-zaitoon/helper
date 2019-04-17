@@ -1,4 +1,4 @@
--keepclassmembers class com.tony.util.** {*; }
--keep public class com.tony.util.** { *;}
--keepclassmembers interface com.tony.interface.** {*;}
--keep public interface com.tony.interface.** {*;}
+-keepclassmembers class tk.mohamed_zaitoon.mzhelper.** {*; }
+-keep public class tk.mohamed_zaitoon.mzhelper.** { *;}
+-keepclassmembers interface tk.mohamed_zaitoon.mzhelper.** {*;}
+-keep public interface tk.mohamed_zaitoon.mzhelper.** {*;}

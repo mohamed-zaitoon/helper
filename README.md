@@ -2,7 +2,7 @@
 # mzlibs
 
 
-[![](https://jitpack.io/v/tk.mohamed-zaitoon/mzlibs.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzlibs)
+[![](https://jitpack.io/v/tk.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzhelper)
 
 An Android library that provides most of used in one Class.
 
@@ -23,7 +23,7 @@ repositories {
 dependencies {
 
 
- implementation 'tk.mohamed-zaitoon:mzlibs:1.0.2'
+ implementation 'tk.mohamed-zaitoon:mzhelper:1.0.4'
  
 }
 ```
@@ -34,10 +34,10 @@ dependencies {
 ## Progaurd
  In progaurd-rules.pro add this lines:
  ```txt
--keepclassmembers class com.tony.** {*; }
--keep public class com.tony.** { *;}
--keepclassmembers interface com.tony.** {*;}
--keep public interface com.tony.** {*;}
+-keepclassmembers class tk.mohamed_zaitoon.mzhelper.** {*; }
+-keep public class tk.mohamed_zaitoon.mzhelper.** { *;}
+-keepclassmembers interface tk.mohamed_zaitoon.mzhelper.** {*;}
+-keep public interface tk.mohamed_zaitoon.mzhelper.** {*;}
  
 ```
 

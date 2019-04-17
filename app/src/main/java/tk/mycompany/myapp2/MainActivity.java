@@ -1,6 +1,6 @@
 /* Created by Mohamed Zaitoon */
 
-package com.mycompany.myapp2;
+package tk.mycompany.myapp2;
 
 import android.app.*;
 import android.os.*;

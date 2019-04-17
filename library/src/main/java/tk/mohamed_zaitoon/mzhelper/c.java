@@ -1,6 +1,5 @@
-package com.tony.util;
+package tk.mohamed_zaitoon.mzhelper;
 
-import com.tony.interfaces.*;
 import java.util.*;
 import android.app.*;
 
