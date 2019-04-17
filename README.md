@@ -19,7 +19,7 @@ repositories {
 dependencies {
 
 
- implementation 'tk.mohamed-zaitoon:mzhelper:1.0'
+ implementation 'tk.mohamed-zaitoon:mzhelper:1.1'
  
 }
 ```
