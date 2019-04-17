@@ -1,6 +1,6 @@
 -printmapping out.map
 -keepparameternames
--renamesourcefileattribute Mohamed Zaitoon
+-renamesourcefileattribute MohamedZaitoon
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
                 SourceFile,LineNumberTable,EnclosingMethod
 
