@@ -31,8 +31,7 @@ subprojects {
     repositories {
         google()
         jcenter()
-maven { url 'https://jitpack.io' }
-	
+ 	
     }
 
     afterEvaluate {
@@ -55,7 +54,7 @@ maven { url 'https://jitpack.io' }
         if (getPlugins().hasPlugin('com.android.library')) {
             task javadoc(type: Javadoc) {
                 failOnError false
-                title = 'MzHelper API'
+                title = 'mzhelper API'
                 exclude '**/internal/**'
                 source = android.sourceSets.main.java.sourceFiles
                 classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
