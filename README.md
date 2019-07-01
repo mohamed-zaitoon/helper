@@ -1,4 +1,5 @@
-[![](https://jitpack.io/v/tk.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#tk.mohamed-zaitoon/mzhelper)
+
+[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzhelper)
 
 An Android library that provides most of used in one Class.
 
@@ -18,22 +19,23 @@ repositories {
 }
 dependencies {
 
+implementation 'io.github.mohamed-zaitoon:helper:1.2'
+	
 
- implementation 'tk.mohamed-zaitoon:mzhelper:1.1'
  
 }
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](https://www.mohamed-zaitoon.tk/mzhelper/docs)
+ [Docs](https://mohamed-zaitoon.github.io/helper/docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
  ```txt
--keepclassmembers class tk.mohamed_zaitoon.mzhelper.** {*; }
--keep public class tk.mohamed_zaitoon.mzhelper.** { *;}
--keepclassmembers interface tk.mohamed_zaitoon.mzhelper.** {*;}
--keep public interface tk.mohamed_zaitoon.mzhelper.** {*;}
+-keepclassmembers class com.zaitoonlibs.helper.** {*; }
+-keep public class com.zaitoonlibs.helper.** { *;}
+-keepclassmembers interface com.zaitoonlibs.helper.** {*;}
+-keep public interface com.zaitoonlibs.helper.** {*;}
  
 ```
 
@@ -41,7 +43,7 @@ dependencies {
 ```txt
   MIT License
 
-Copyright (c) 2019 Mohamed Zaitoon
+Copyright (c) 2019 ZaitoonLibs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

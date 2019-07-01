@@ -1,4 +1,4 @@
-package tk.mohamed_zaitoon.mzhelper;
+package com.zaitoonlibs.helper;
 
 final class b implements Runnable
 
@@ -10,10 +10,10 @@ final class b implements Runnable
 
 
         //private com.tony.interfaces.TimerInterface timer;
-        private tk.mohamed_zaitoon.mzhelper.TimerInterface timer;
+        private com.zaitoonlibs.helper.TimerInterface timer;
 
         //public c(com.tony.interfaces.TimerInterface t){
-        public b(tk.mohamed_zaitoon.mzhelper.TimerInterface t){
+        public b(com.zaitoonlibs.helper.TimerInterface t){
 
                 //this.timer = t;
                 this.timer = t;

@@ -1,7 +1,7 @@
   /* Orginal file: MzUtils.java
 bgteam.assitant@outlook.com
  \com.tony.util*/
- package tk.mohamed_zaitoon.mzhelper;
+ package com.zaitoonlibs.helper;
 
 import android.*;
 import android.app.*;
@@ -18,9 +18,10 @@ import android.util.*;
 import android.view.*;
 import java.util.*;
 import java.io.*;
+import com.zaitoonlibs.helper.*;
 
 
-  public final class MzHelper
+  public final class Helper
 
     //{
   {
@@ -452,7 +453,7 @@ import java.io.*;
 
 
                 //return com.tony.util.b.a(str);
-  		return tk.mohamed_zaitoon.mzhelper.a.a(str);
+  		return com.zaitoonlibs.helper.a.a(str);
 
             //}
   		}
@@ -461,7 +462,7 @@ import java.io.*;
   	public static String encode(String str){
 
 
-    	return tk.mohamed_zaitoon.mzhelper.a.c(str);
+    	return com.zaitoonlibs.helper.a.c(str);
 
             //}
   		}
@@ -796,7 +797,7 @@ import java.io.*;
   	public static void launchApp(Context act, String str){
 
                 //if (PackagesUtils.isAppEnabled(act, str)) {
-  		if (MzHelper.isAppEnabled(act, str)) {
+  		if (Helper.isAppEnabled(act, str)) {
 
                         //Intent launchIntent = act.getPackageManager().getLaunchIntentForPackage(str);
   			Intent launchIntent = act.getPackageManager().getLaunchIntentForPackage(str);  
@@ -828,7 +829,7 @@ import java.io.*;
                     //}
   			}
                     //if ( PackagesUtils.isAppEnabled ( Context, l001321 ( 1011 ) ) )
-  		if ( MzHelper.isAppEnabled ( Context, l001321 ( 1011 ) ) )
+  		if ( Helper.isAppEnabled ( Context, l001321 ( 1011 ) ) )
                         //{
   		{
 

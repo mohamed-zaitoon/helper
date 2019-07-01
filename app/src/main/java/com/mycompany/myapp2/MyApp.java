@@ -1,12 +1,12 @@
  /* Orginal file: MyApp.java
 bgteam.assitant@outlook.com
 \com.mycompany.myapp2*/
-package tk.mycompany.myapp2;
+package com.mycompany.myapp2;
 import java.util.List;
 import java.util.List;
 
 import android.app.*;
-import tk.tony.util.*;
+import com.tony.util.*;
 
 
   public class MyApp extends Application

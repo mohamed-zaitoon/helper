@@ -1,4 +1,4 @@
--keepclassmembers class tk.mohamed_zaitoon.mzhelper.** {*; }
--keep public class tk.mohamed_zaitoon.mzhelper.** { *;}
--keepclassmembers interface tk.mohamed_zaitoon.mzhelper.** {*;}
--keep public interface tk.mohamed_zaitoon.mzhelper.** {*;}
+-keepclassmembers class com.zaitoonlibs.helper.** {*; }
+-keep public class com.zaitoonlibs.helper.** { *;}
+-keepclassmembers interface com.zaitoonlibs.helper.** {*;}
+-keep public interface com.zaitoonlibs.helper.** {*;}
