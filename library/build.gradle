@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='io.github.mohamed-m-zaitoon'
-version "2.1"
+version "200411"
 
 android {
 
