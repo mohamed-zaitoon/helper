@@ -2,10 +2,6 @@
 -renamesourcefileattribute MzSource
 -keepattributes SourceFile,LineNumberTable
 
-
-
--keepattributes *Annotation*
-
 -ignorewarnings
 -dontwarn
 -dontnote
