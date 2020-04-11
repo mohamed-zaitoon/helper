@@ -13,7 +13,7 @@ repositories {
 }
 dependencies {
 
-implementation 'io.github.mohamed-m-zaitoon:helper:200411.19'
+implementation 'io.github.mohamed-m-zaitoon:helper:200411.21'
 	
 
  
