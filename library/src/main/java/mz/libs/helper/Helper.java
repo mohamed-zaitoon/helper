@@ -31,6 +31,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
 import androidx.annotation.Keep;
+import android.os.VibrationEffect;
 
 @Keep
 public final class Helper
@@ -59,11 +60,39 @@ public final class Helper
   		return srcFile;
             //}
   		}
-	
-  	//public static String getVersionCode(Context mz, String pg){
+	public static String getLongVersionCode(Context mz, String pg){
+        String str = l000030(228);
+
+        //try {
+        try {
+
+            //int i = mz.getPackageManager().getPackageInfo(pg, 0).versionCode;
+            long i =  mz.getPackageManager().getPackageInfo(pg, 0).getLongVersionCode();
+
+            //str = String.valueOf(i).trim();
+            str = String.valueOf(i).trim();
+
+
+            //}
+        }
+
+        //catch (NameNotFoundException e)
+        catch (PackageManager.NameNotFoundException e)
+
+        //{
+        {
+
+            //}
+        }
+        
+        return str;
+    }
+  	
+      //public static String getVersionCode(Context mz, String pg){
+          @Deprecated
   	public static String getVersionCode(Context mz, String pg){
 
-		
+		/*
   		//String str = l000433(228);
   		String str = l000030(228);
 		
@@ -89,8 +118,8 @@ public final class Helper
   			//}
   			}
 		
-  		//return str;
-  		return str;
+  		//return str;*/
+  		return "";
 	
   		//}
   		}
@@ -482,10 +511,11 @@ public final class Helper
 
         
         //public static void startVibrate(Context act, long l){
-  	public static void startVibrate(Context act, long l){
+  	@Deprecated
+            public static void startVibrate(Context act, long l){
 
 
-
+/*
 
                 //vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
   		vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
@@ -503,6 +533,7 @@ public final class Helper
 				
   			}
                 //}
+                */
   		}
 
 
@@ -610,8 +641,9 @@ public final class Helper
   		}
 
         //public static void setLocale(Context mzAc, String lang) {
-  	public static void setLocale(Context mzAc, String lang) {
-
+    @Deprecated
+       public static void setLocale(Context mzAc, String lang) {
+/*
                 //Locale Language = new Locale ( lang );
   		Locale Language = new Locale ( lang );
 
@@ -630,8 +662,9 @@ public final class Helper
                 //res.updateConfiguration(conf, dm);
   		res.updateConfiguration(conf, dm);
 
+*/
 
-
+           
             //}
   		} 
 
@@ -731,16 +764,18 @@ public final class Helper
   		}
         
         //public static String getDeviceLanguage()
+    @Deprecated
   	public static String getDeviceLanguage()
 
             //{
   	{
-
+/*
                 //return Locale.getDefault().getDisplayLanguage();
   		return Locale.getDefault().getDisplayLanguage();
 
-
+*/
             //}
+            return "";
   		}
         
         //public static boolean isRooted()
@@ -880,9 +915,10 @@ public final class Helper
   		}
         
         //public static boolean isConnected(Context Context) {
+    @Deprecated
   	public static boolean isConnected(Context Context) {
 
-                //try {
+            /*    //try {
   		try {
 
 
@@ -922,7 +958,10 @@ public final class Helper
   			return false;
 
                     //}}
-  			}}
+  			}
+            
+            */
+         return false; }
 	        //static String l001321(int l001320){
   	private static String l001321(int l001320){
 

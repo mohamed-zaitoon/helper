@@ -1,4 +1,3 @@
-​-printmapping out.map
 -keepparameternames
 -renamesourcefileattribute MzSource
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
