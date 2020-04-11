@@ -1,7 +1,8 @@
 -keepparameternames
--renamesourcefileattribute MzSource
--keepattributes Exceptions,InnerClasses,Signature,Deprecated,
-                SourceFile,LineNumberTable,EnclosingMethod
+-renamesourcefileattribute MzSource
+-keepattributes SourceFile,LineNumberTable
+
+
 
 -keepattributes *Annotation*
 
