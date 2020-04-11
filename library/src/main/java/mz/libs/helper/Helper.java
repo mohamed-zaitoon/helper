@@ -34,6 +34,7 @@ import androidx.annotation.Keep;
 import android.os.VibrationEffect;
 
 @Keep
+@SuppressWarnings("deprecation")
 public final class Helper
 
     //{
