@@ -23,15 +23,6 @@ implementation 'io.github.mohamed-m-zaitoon:helper:200411.19'
  For Tutorial Visit:
  [Docs](https://mohamed-m-zaitoon.github.io/helper/docs)
  
-## Progaurd
- In progaurd-rules.pro add this lines:
- ```txt
--keepclassmembers class mz.libs.helper.** {*; }
--keep public class mz.libs.helper.** { *;}
--keepclassmembers interface mz.libs.helper.** {*;}
--keep public interface mz.libs.helper.** {*;}
- 
-```
 
 ## License 
 ```txt
