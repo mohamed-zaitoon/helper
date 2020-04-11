@@ -6,50 +6,32 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:3.6.1'
 
- classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+ classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
   
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    maven { url "https://jitpack.io" }
+  }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-subprojects {
-    buildscript {
-        repositories {
-            google()
-            jcenter()
-			
-        }
-    }
 
-    repositories {
-        google()
-        jcenter()
- 	
-    }
+
+    
 
     afterEvaluate {
-        android {
-            compileSdkVersion 29
-            buildToolsVersion "29.0.3"
-
-            defaultConfig {
-                if (minSdkVersion == null)
-                    minSdkVersion 19
-                targetSdkVersion 29
-            }
-
-            compileOptions {
-                sourceCompatibility JavaVersion.VERSION_1_8
-                targetCompatibility JavaVersion.VERSION_1_8
-            }
-        }
+        
 
         if (getPlugins().hasPlugin('com.android.library')) {
             task javadoc(type: Javadoc) {
