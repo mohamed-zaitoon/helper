@@ -6,17 +6,8 @@
 -dontwarn
 -dontnote
 
--keepclasseswithmembernames class * {
-    native <methods>;
-    public *;
-}
--keepclasseswithmembernames interface * {
-    *;
-}
+-keepclassmembers class mz.libs.helper.** {*; }
+-keep public class mz.libs.helper.** { *;}
+-keepclassmembers interface mz.libs.helper.** {*;}
+-keep public interface mz.libs.helper.** {*;}
 
--keep public class * {
-    public *;
-}
--keep public interface * {
-*;
-}
