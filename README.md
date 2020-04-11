@@ -1,5 +1,5 @@
 
-[![](https://jitpack.io/v/io.github.mohamed-m-zaitoon/helper.svg)](https://jitpack.io/#io.github.mohamed-m-zaitoon/zhelper)
+[![](https://jitpack.io/v/io.github.mohamed-m-zaitoon/helper.svg)](https://jitpack.io/#io.github.mohamed-m-zaitoon/helper)
 
 An Android library that provides most of used in one Class.
 
