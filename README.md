@@ -7,19 +7,13 @@ An Android library that provides most of used in one Class.
 ## Download
 
 ```java
-android {
-    /* Android Gradle Plugin 3.5.+ is required to support Java 8 desugaring */
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}
+
 repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
 
-implementation 'io.github.mohamed-m-zaitoon:helper:2.1'
+implementation 'io.github.mohamed-m-zaitoon:helper:200411'
 	
 
  
