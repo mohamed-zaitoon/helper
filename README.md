@@ -19,7 +19,7 @@ repositories {
 }
 dependencies {
 
-implementation 'io.github.mohamed-m-zaitoon:helper:2.0'
+implementation 'io.github.mohamed-m-zaitoon:helper:2.1'
 	
 
  
