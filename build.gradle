@@ -31,36 +31,4 @@ task clean(type: Delete) {
 
     
 
-    afterEvaluate {
-        
-
-        if (getPlugins().hasPlugin('com.android.library')) {
-            task javadoc(type: Javadoc) {
-                failOnError false
-                title = 'helper API'
-                exclude '**/internal/**'
-                source = android.sourceSets.main.java.sourceFiles
-                classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-                classpath += configurations.compile
-                options.links('https://docs.oracle.com/javase/8/docs/api/')
-                options.links('https://developer.android.com/reference/')
-                options.noDeprecated = true
-            }
-
-            task sourcesJar(type: Jar) {
-                classifier = 'sources'
-                from android.sourceSets.main.java.sourceFiles
-            }
-
-            task javadocJar(type: Jar, dependsOn: javadoc) {
-                classifier = 'javadoc'
-                from javadoc.destinationDir
-            }
-
-            artifacts {
-                archives javadocJar
-                archives sourcesJar
-            }
-        }
-    }
-
+    
