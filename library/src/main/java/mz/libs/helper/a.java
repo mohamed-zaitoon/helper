@@ -1,7 +1,7 @@
   /* Orginal file: b.java
 bgteam.assitant@outlook.com
 \com.tony.util*/
-package com.zaitoonlibs.helper;
+package mz.libs.helper;
 
 import java.util.List;
 //import java.util.List;

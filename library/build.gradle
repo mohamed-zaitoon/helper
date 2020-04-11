@@ -1,18 +1,18 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='io.github.mohamed-zaitoon'
-version "1.2"
+group='io.github.mohamed-m-zaitoon'
+version "2.0"
 
 android {
 
 
 
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 29
 	   consumerProguardFiles 'proguard-user.txt'
     }
 	
@@ -29,8 +29,8 @@ android {
 }
    
 dependencies {
-	api 'com.android.support:support-compat:27.0.2'
-	api 'com.android.support:support-annotations:27.0.2'
+	implementation 'androidx.core:core:1.0.0'
+	implementation 'androidx.annotation:annotation:1.1.3'
 	
 	}
 	

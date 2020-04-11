@@ -1,5 +1,5 @@
 
-[![](https://jitpack.io/v/io.github.mohamed-zaitoon/mzhelper.svg)](https://jitpack.io/#io.github.mohamed-zaitoon/mzhelper)
+[![](https://jitpack.io/v/io.github.mohamed-m-zaitoon/helper.svg)](https://jitpack.io/#io.github.mohamed-m-zaitoon/zhelper)
 
 An Android library that provides most of used in one Class.
 
@@ -8,7 +8,7 @@ An Android library that provides most of used in one Class.
 
 ```java
 android {
-    /* Android Gradle Plugin 3.0.0+ is required to support Java 8 desugaring */
+    /* Android Gradle Plugin 3.5.+ is required to support Java 8 desugaring */
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -19,7 +19,7 @@ repositories {
 }
 dependencies {
 
-implementation 'io.github.mohamed-zaitoon:helper:1.2'
+implementation 'io.github.mohamed-m-zaitoon:helper:2.0'
 	
 
  
@@ -27,15 +27,15 @@ implementation 'io.github.mohamed-zaitoon:helper:1.2'
 ```
 ## Tutorial
  For Tutorial Visit:
- [Docs](https://mohamed-zaitoon.github.io/helper/docs)
+ [Docs](https://mohamed-m-zaitoon.github.io/helper/docs)
  
 ## Progaurd
  In progaurd-rules.pro add this lines:
  ```txt
--keepclassmembers class com.zaitoonlibs.helper.** {*; }
--keep public class com.zaitoonlibs.helper.** { *;}
--keepclassmembers interface com.zaitoonlibs.helper.** {*;}
--keep public interface com.zaitoonlibs.helper.** {*;}
+-keepclassmembers class mz.libs.helper.** {*; }
+-keep public class mz.libs.helper.** { *;}
+-keepclassmembers interface mz.libs.helper.** {*;}
+-keep public interface mz.libs.helper.** {*;}
  
 ```
 
@@ -43,7 +43,7 @@ implementation 'io.github.mohamed-zaitoon:helper:1.2'
 ```txt
   MIT License
 
-Copyright (c) 2019 ZaitoonLibs
+Copyright (c) 2020 MzLibs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

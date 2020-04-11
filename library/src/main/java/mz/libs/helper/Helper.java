@@ -1,27 +1,39 @@
   /* Orginal file: MzUtils.java
 bgteam.assitant@outlook.com
  \com.tony.util*/
- package com.zaitoonlibs.helper;
+ package mz.libs.helper;
 
-import android.*;
-import android.app.*;
-import android.content.*;
-import android.content.pm.*;
-import android.content.res.*;
-import android.media.*;
-import android.net.*;
-import android.os.*;
-import android.support.annotation.*;
-import android.support.v4.app.*;
-import android.support.v4.content.*;
-import android.util.*;
-import android.view.*;
-import java.util.*;
-import java.io.*;
-import com.zaitoonlibs.helper.*;
+import android.Manifest;
+import android.app.Activity;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.BatteryManager;
+import android.os.Vibrator;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.WindowManager;
+import androidx.annotation.DrawableRes;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import java.io.File;
+import java.util.Locale;
+import java.util.Random;
+import java.util.Timer;
+import androidx.annotation.Keep;
 
-
-  public final class Helper
+@Keep
+public final class Helper
 
     //{
   {
@@ -453,7 +465,7 @@ import com.zaitoonlibs.helper.*;
 
 
                 //return com.tony.util.b.a(str);
-  		return com.zaitoonlibs.helper.a.a(str);
+  		return mz.libs.helper.a.a(str);
 
             //}
   		}
@@ -462,7 +474,7 @@ import com.zaitoonlibs.helper.*;
   	public static String encode(String str){
 
 
-    	return com.zaitoonlibs.helper.a.c(str);
+    	return mz.libs.helper.a.c(str);
 
             //}
   		}

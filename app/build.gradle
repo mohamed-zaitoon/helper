@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-compileSdkVersion 28
+compileSdkVersion 29
 
     defaultConfig {
         applicationId "com.mycompany.myapp2"
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 29
         versionCode 1
 		multiDexEnabled false
         versionName "1.0"
@@ -40,17 +40,16 @@ compileSdkVersion 28
 		
 			signingConfig signingConfigs.release
             minifyEnabled true
-            shrinkResources false
+            shrinkResources true
             zipAlignEnabled true
-            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-	implementation 'com.android.support:appcompat-v7:27.0.2'
+	implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation  project(':library')
-	compile fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
  
 	}
