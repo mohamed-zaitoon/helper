@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='io.github.mohamed-m-zaitoon'
-version "2.0"
+version "2.1"
 
 android {
 
@@ -18,7 +18,7 @@ android {
 	
 	buildTypes {
         release {
-			useProguard true
+			
             minifyEnabled true
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
