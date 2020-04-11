@@ -1,5 +1,5 @@
 -keepparameternames
--renamesourcefileattribute MzSource
+-renamesourcefileattribute
 -keepattributes SourceFile,LineNumberTable
 
 -ignorewarnings
