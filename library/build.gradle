@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='io.github.mohamed-m-zaitoon'
-version "200411.19"
+version "200411.21"
 
 android {
 
@@ -14,7 +14,6 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 29
-	   consumerProguardFiles 'proguard-user.txt'
     }
 	
 	buildTypes {
@@ -30,7 +29,6 @@ android {
 }
    
 dependencies {
-	api 'androidx.core:core:1.0.0'
-        api 'androidx.annotation:annotation:1.0.0'
-	}
+	implementation 'androidx.core:core:1.0.0'
+        }
 	
