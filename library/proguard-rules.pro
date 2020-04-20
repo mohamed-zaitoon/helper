@@ -1,24 +1,13 @@
--printmapping out.map
 -keepparameternames
--renamesourcefileattribute ZaitoonSource
--keepattributes Exceptions,InnerClasses,Signature,Deprecated,
-                SourceFile,LineNumberTable,EnclosingMethod
+-renamesourcefileattribute
+-keepattributes SourceFile,LineNumberTable
 
--keepattributes *Annotation*
+-ignorewarnings
+-dontwarn
+-dontnote
 
-
--keepclasseswithmembernames class * {
-    native <methods>;
-    public *;
-}
--keepclasseswithmembernames interface * {
-    *;
-}
-
--keep public class * {
-    public *;
-}
--keep public interface * {
-*;
-}
+-keepclassmembers class mz.libs.helper.** {*; }
+-keep public class mz.libs.helper.** { *;}
+-keepclassmembers interface mz.libs.helper.** {*;}
+-keep public interface mz.libs.helper.** {*;}
 

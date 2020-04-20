@@ -1,27 +1,41 @@
   /* Orginal file: MzUtils.java
 bgteam.assitant@outlook.com
  \com.tony.util*/
- package com.zaitoonlibs.helper;
+ package mz.libs.helper;
 
-import android.*;
-import android.app.*;
-import android.content.*;
-import android.content.pm.*;
-import android.content.res.*;
-import android.media.*;
-import android.net.*;
-import android.os.*;
-import android.support.annotation.*;
-import android.support.v4.app.*;
-import android.support.v4.content.*;
-import android.util.*;
-import android.view.*;
-import java.util.*;
-import java.io.*;
-import com.zaitoonlibs.helper.*;
+import android.Manifest;
+import android.app.Activity;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.BatteryManager;
+import android.os.Vibrator;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.WindowManager;
+import androidx.annotation.DrawableRes;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import java.io.File;
+import java.util.Locale;
+import java.util.Random;
+import java.util.Timer;
+import androidx.annotation.Keep;
+import android.os.VibrationEffect;
 
-
-  public final class Helper
+@Keep
+@SuppressWarnings("deprecation")
+public final class Helper
 
     //{
   {
@@ -47,11 +61,39 @@ import com.zaitoonlibs.helper.*;
   		return srcFile;
             //}
   		}
-	
-  	//public static String getVersionCode(Context mz, String pg){
+	public static String getLongVersionCode(Context mz, String pg){
+        String str = l000030(228);
+
+        //try {
+        try {
+
+            //int i = mz.getPackageManager().getPackageInfo(pg, 0).versionCode;
+            long i =  mz.getPackageManager().getPackageInfo(pg, 0).getLongVersionCode();
+
+            //str = String.valueOf(i).trim();
+            str = String.valueOf(i).trim();
+
+
+            //}
+        }
+
+        //catch (NameNotFoundException e)
+        catch (PackageManager.NameNotFoundException e)
+
+        //{
+        {
+
+            //}
+        }
+        
+        return str;
+    }
+  	
+      //public static String getVersionCode(Context mz, String pg){
+          @Deprecated
   	public static String getVersionCode(Context mz, String pg){
 
-		
+		/*
   		//String str = l000433(228);
   		String str = l000030(228);
 		
@@ -77,8 +119,8 @@ import com.zaitoonlibs.helper.*;
   			//}
   			}
 		
-  		//return str;
-  		return str;
+  		//return str;*/
+  		return "";
 	
   		//}
   		}
@@ -453,7 +495,7 @@ import com.zaitoonlibs.helper.*;
 
 
                 //return com.tony.util.b.a(str);
-  		return com.zaitoonlibs.helper.a.a(str);
+  		return mz.libs.helper.a.a(str);
 
             //}
   		}
@@ -462,7 +504,7 @@ import com.zaitoonlibs.helper.*;
   	public static String encode(String str){
 
 
-    	return com.zaitoonlibs.helper.a.c(str);
+    	return mz.libs.helper.a.c(str);
 
             //}
   		}
@@ -470,10 +512,11 @@ import com.zaitoonlibs.helper.*;
 
         
         //public static void startVibrate(Context act, long l){
-  	public static void startVibrate(Context act, long l){
+  	@Deprecated
+            public static void startVibrate(Context act, long l){
 
 
-
+/*
 
                 //vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
   		vib = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
@@ -491,6 +534,7 @@ import com.zaitoonlibs.helper.*;
 				
   			}
                 //}
+                */
   		}
 
 
@@ -598,8 +642,9 @@ import com.zaitoonlibs.helper.*;
   		}
 
         //public static void setLocale(Context mzAc, String lang) {
-  	public static void setLocale(Context mzAc, String lang) {
-
+    @Deprecated
+       public static void setLocale(Context mzAc, String lang) {
+/*
                 //Locale Language = new Locale ( lang );
   		Locale Language = new Locale ( lang );
 
@@ -618,8 +663,9 @@ import com.zaitoonlibs.helper.*;
                 //res.updateConfiguration(conf, dm);
   		res.updateConfiguration(conf, dm);
 
+*/
 
-
+           
             //}
   		} 
 
@@ -719,16 +765,18 @@ import com.zaitoonlibs.helper.*;
   		}
         
         //public static String getDeviceLanguage()
+    @Deprecated
   	public static String getDeviceLanguage()
 
             //{
   	{
-
+/*
                 //return Locale.getDefault().getDisplayLanguage();
   		return Locale.getDefault().getDisplayLanguage();
 
-
+*/
             //}
+            return "";
   		}
         
         //public static boolean isRooted()
@@ -868,9 +916,10 @@ import com.zaitoonlibs.helper.*;
   		}
         
         //public static boolean isConnected(Context Context) {
+    @Deprecated
   	public static boolean isConnected(Context Context) {
 
-                //try {
+            /*    //try {
   		try {
 
 
@@ -910,7 +959,10 @@ import com.zaitoonlibs.helper.*;
   			return false;
 
                     //}}
-  			}}
+  			}
+            
+            */
+         return false; }
 	        //static String l001321(int l001320){
   	private static String l001321(int l001320){
 

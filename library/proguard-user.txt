@@ -1,4 +1,0 @@
--keepclassmembers class com.zaitoonlibs.helper.** {*; }
--keep public class com.zaitoonlibs.helper.** { *;}
--keepclassmembers interface com.zaitoonlibs.helper.** {*;}
--keep public interface com.zaitoonlibs.helper.** {*;}
