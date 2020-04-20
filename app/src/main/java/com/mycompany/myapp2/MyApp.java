@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.List;
 
 import android.app.*;
-import com.tony.util.*;
 
 
   public class MyApp extends Application

@@ -18,10 +18,11 @@ import android.animation.*;
 import android.view.animation.*;
 import java.util.*;
 import java.text.*;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.annotation.*;
+import mz.libs.helper.Helper;
 public class MainActivity extends AppCompatActivity {
 
 
@@ -33,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
-		setContentView(R.layout.mzlibs);
-		initialize(_savedInstanceState);
+        Helper.blockScreenShot(this);
+		//setContentView(R.layout.mzlibs);
+	//	initialize(_savedInstanceState);
 	}
-
+/*
 	private void initialize(Bundle _savedInstanceState) {
 
 		webview1 = (WebView) findViewById(R.id.activity_main_webview);
@@ -50,10 +52,9 @@ public class MainActivity extends AppCompatActivity {
 		webview1.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
 		webview1.setWebChromeClient(new WebChromeClient());
 
-		webview1.loadUrl("http://192.168.43.1:6540");
-	    pD.setTitle("");
-		pD.setMessage("Loading please wait..");
-	    pD.setCancelable(false);
+		webview1.loadUrl("https://mohamed-m-zaitoon.github.io");
+		pD.show(this,"Loading please wait..", "", false);
+	 
 
 		webview1.setWebViewClient(new WebViewClient() {
 				@Override
@@ -124,5 +125,5 @@ public class MainActivity extends AppCompatActivity {
 		mErr.setVisibility(View.GONE);
 		webview1.reload();
 	}
-
+*/
 }

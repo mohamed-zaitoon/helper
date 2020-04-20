@@ -1,24 +1,17 @@
--printmapping out.map
--keepparameternames
--renamesourcefileattribute TonySrc
--keepattributes Exceptions,InnerClasses,Signature,Deprecated,
-                SourceFile,LineNumberTable,EnclosingMethod
+-renamesourcefileattribute MzSource
+-keepattributes SourceFile,LineNumberTable
 
 -keepattributes *Annotation*
 
+-ignorewarnings
+-dontwarn
+-dontnote
+-repackageclasses
 
--keepclasseswithmembernames class * {
-    native <methods>;
-    public *;
-}
--keepclasseswithmembernames interface * {
-    *;
-}
 
--keep public class * {
-    public *;
-}
--keep public interface * {
-*;
-}
+-dontwarn androidx.arch.**
+-dontwarn androidx.lifecycle.**
+-keep class androidx.arch.** { *; }
+-keep class androidx.lifecycle.** { *; }
+-keep public class com.mycompany.myapp2.** {*; }
 

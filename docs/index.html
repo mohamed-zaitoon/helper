@@ -13,10 +13,10 @@
 	<script>hljs.initHighlightingOnLoad();</script>
 	  <!-- Global site tag (gtag.js) - Google Analytics -->
 
-	</head>
+	</link></link></link></meta></head>
   <body style="font-size:15px;" dir="ltr">
 
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make splash screen use<br>MzHelper.setTimer(Activity activity,<br>int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make splash screen use<br>Helper.setTimer(Activity activity,<br>int milliseconds, TimerInterface timerInterface);</br></br></p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -32,13 +32,13 @@ startActivity(intent);
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_splash);
-MzHelper.setTimer(this, 500, this);
+Helper.setTimer(this, 500, this);
 }
 }
-	  </code>
+	  </br></code>
 	</pre>
 
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make app do thing every 500 ms, 1s or 1m .. etc use MzHelper.setTimerForEver(Activity activity,<br> int milliseconds, TimerInterface timerInterface);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make app do thing every 500 ms, 1s or 1m .. etc use Helper.setTimerForEver(Activity activity,<br> int milliseconds, TimerInterface timerInterface);</br></p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -54,10 +54,10 @@ Log.d("MainActivity", "Done");
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.setTimerForEver(this, 1000, this);
+Helper.setTimerForEver(this, 1000, this);
 }
 }
-	  </code>
+	  </br></code>
 	</pre>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make app play music use startMedia(Context context, int mediaId);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
@@ -71,14 +71,14 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.startMedia(this, R.raw.song);
+Helper.startMedia(this, R.raw.song);
 // If you want stop use stopMedia();
 }
 
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to Decode from Base64 use MzHelper.decode(String base64);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to Decode from Base64 use Helper.decode(String base64);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -90,12 +90,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-Log.d("MainActivity:", MzHelper.decode("WW91ciBhcmUgQ29vbA==");
+Log.d("MainActivity:", Helper.decode("WW91ciBhcmUgQ29vbA==");
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to Encode to Base64 use MzHelper.encode(String string);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to Encode to Base64 use Helper.encode(String string);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -107,12 +107,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-Log.d("MainActivity:", MzHelper.decode("Android Is Best");
+Log.d("MainActivity:", Helper.decode("Android Is Best");
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make device vibrate use MzHelper.startVibrate(Context context, long vibrate_long);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to make device vibrate use Helper.startVibrate(Context context, long vibrate_long);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code xml" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -127,12 +127,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.startVibrate(this, 1000);
+Helper.startVibrate(this, 1000);
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Location Y for View use MzHelper.getLocationY(View view);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Location Y for View use Helper.getLocationY(View view);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -145,14 +145,14 @@ protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
 LinearLayout linear = findViewById(R.id.mContent);
-int locY = MzHelper.getLocationY(linear);
-Log.d("MainActivity", /*To convert int to String*/ MzHelper.getString(this, locY));
+int locY = Helper.getLocationY(linear);
+Log.d("MainActivity", /*To convert int to String*/ Helper.getString(this, locY));
 }
 }
 	  </code>
 	</pre>
 
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Location X for View use MzHelper.getLocationX(View view);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Location X for View use Helper.getLocationX(View view);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -165,13 +165,13 @@ protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
 LinearLayout linear = findViewById(R.id.mContent);
-int locX = MzHelper.getLocationX(linear);
-Log.d("MainActivity", MzHelper.getString(this, locX));
+int locX = Helper.getLocationX(linear);
+Log.d("MainActivity", Helper.getString(this, locX));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Random from X to Y use MzHelper.getRandom(int x, int y);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Random from X to Y use Helper.getRandom(int x, int y);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -183,13 +183,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-int ran = MzHelper.getRandom(0,9);
-Log.d("MainActivty", MzHelper.getString(this, ran));
+int ran = Helper.getRandom(0,9);
+Log.d("MainActivty", Helper.getString(this, ran));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Dip from X use MzHelper.getDip(Context context, int X);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Dip from X use Helper.getDip(Context context, int X);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -201,14 +201,14 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-float f = MzHelper.getDip(this, 10);
+float f = Helper.getDip(this, 10);
 int i = (int) f;
-Log.d("MainActivity", MzHelper.getString(this, i));
+Log.d("MainActivity", Helper.getString(this, i));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Display Width Pixels use MzHelper.getDisplayWidthPixels(Context context);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Display Width Pixels use Helper.getDisplayWidthPixels(Context context);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -220,13 +220,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-int width = MzHelper.getDisplayWidthPixels(this);
-Log.d("MainActivity", MzHelper.getString(this, width));
+int width = Helper.getDisplayWidthPixels(this);
+Log.d("MainActivity", Helper.getString(this, width));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Display Height Pixels use MzHelper.getDisplayHeightPixels(Context context);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Display Height Pixels use Helper.getDisplayHeightPixels(Context context);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -238,13 +238,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-int height = MzHelper.getDisplayHeightPixels(this);
-Log.d("MainActivity", MzHelper.getString(this, height));
+int height = Helper.getDisplayHeightPixels(this);
+Log.d("MainActivity", Helper.getString(this, height));
 		}
 		}
 	  </code>
 	</pre>
-<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to block Screen Shot in your app use MzHelper.blockScreenShot(Activity activity);</p>
+<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to block Screen Shot in your app use Helper.blockScreenShot(Activity activity);</p>
 <p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 <pre class="w3-container w3-light-grey w3-border">
 <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -256,12 +256,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.blockScreenShot(this);
+Helper.blockScreenShot(this);
 }
 }
 	  </code>
 	</pre>
-<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Battery Level use MzHelper.getBatteryLevel(Context context);</p>
+<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Battery Level use Helper.getBatteryLevel(Context context);</p>
 <p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 <pre class="w3-container w3-light-grey w3-border">
 <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -273,13 +273,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-int batLevel = MzHelper.getBatteryLevel(this);
+int batLevel = Helper.getBatteryLevel(this);
 Log.d("MainActivity", Integer.toString(batLevel));
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to force Language in your app use MzHelper.setLocale(Context context, String langCode);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to force Language in your app use Helper.setLocale(Context context, String langCode);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -291,12 +291,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.setLocale("ar");
+Helper.setLocale("ar");
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to show Notification use MzHelper.showNotification(Context context, String title, String message,@Drawable int resId);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to show Notification use Helper.showNotification(Context context, String title, String message,@Drawable int resId);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -308,12 +308,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.showNotification(this, "Android", "MainActivity" , R.drawable.ic_noti);
+Helper.showNotification(this, "Android", "MainActivity" , R.drawable.ic_noti);
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Device Language use MzHelper.getDeviceLanguage();</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Device Language use Helper.getDeviceLanguage();</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -325,13 +325,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-String dLang = MzHelper.getDeviceLanguage();
+String dLang = Helper.getDeviceLanguage();
 Log.d("MainActivity", dLang);
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if Device is Rooted use MzHelper.isRooted();</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if Device is Rooted use Helper.isRooted();</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -343,7 +343,7 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-if (MzHelper.isRooted()){
+if (Helper.isRooted()){
   Log.d("MainActivity", "Device is Rooted");
 } else {
   Log.d("MainActivity", "Device not Rooted");
@@ -352,7 +352,7 @@ if (MzHelper.isRooted()){
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Country Code use MzHelper.getCountryCode(Context context);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Country Code use Helper.getCountryCode(Context context);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -364,13 +364,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-String code = MzHelper.getCountryCode(this);
+String code = Helper.getCountryCode(this);
 Log.d("MainActivity", code);
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to launch App use MzHelper.launchApp(Context context, String packageName);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to launch App use Helper.launchApp(Context context, String packageName);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -382,12 +382,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.launchApp(this, "com.google.android.gm");
+Helper.launchApp(this, "com.google.android.gm");
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to launch App use MzHelper.openUrl(Context context, String url, String chooser);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to launch App use Helper.openUrl(Context context, String url, String chooser);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -399,12 +399,12 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-MzHelper.openUrl(this, "https://mohamed-zaitoon.github.io", "Choose App");
+Helper.openUrl(this, "https://mohamed-m-zaitoon.github.io", "Choose App");
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if Device is Connected to internet use MzHelper.isConnected(Context context);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if Device is Connected to internet use Helper.isConnected(Context context);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -416,7 +416,7 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-if (MzHelper.isConnected(this)){
+if (Helper.isConnected(this)){
 Log.d("MainActivity", "Device is Connected to Internet");
 } else {
 Log.d("MainActivity", "Device not Connected to Internet");
@@ -425,7 +425,7 @@ Log.d("MainActivity", "Device not Connected to Internet");
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get VersionName for any app use MzHelper.getVersionName(Context context, String packageName);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get VersionName for any app use Helper.getVersionName(Context context, String packageName);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -437,13 +437,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-String verName = MzHelper.getVersionName(this, "com.android.chrome");
+String verName = Helper.getVersionName(this, "com.android.chrome");
 Log.d("MainActivity", verName);
 }
 }
 	  </code>
 	</pre>
-<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get VersionCode for any app use MzHelper.getVersionName(Context context, String packageName);</p>
+<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get VersionCode for any app use Helper.getVersionName(Context context, String packageName);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -455,13 +455,13 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-String verName = MzHelper.getVersionCode(this, "com.android.chrome");
+String verName = Helper.getVersionCode(this, "com.android.chrome");
 Log.d("MainActivity", verName);
 }
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if any app is App Enabled or not use MzHelper.isAppEnabled(Context context, String packageName);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to check if any app is App Enabled or not use Helper.isAppEnabled(Context context, String packageName);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -473,7 +473,7 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-if (MzHelper.isAppEnabled(this, "com.example")){
+if (Helper.isAppEnabled(this, "com.example")){
 Log.d("MainActivity", "App is Installed & Enabled");
 } else {
 Log.d("MainActivity", "App not Enabled or not Installed");
@@ -482,7 +482,7 @@ Log.d("MainActivity", "App not Enabled or not Installed");
 }
 	  </code>
 	</pre>
-	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Apk File for any app use MzHelper.getApkFile(Context context, String packageName);</p>
+	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'>If you want to get Apk File for any app use Helper.getApkFile(Context context, String packageName);</p>
 	<p style="font-size:15px;" oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> Example Code: </p>
 	<pre class="w3-container w3-light-grey w3-border">
 	  <code class="w3-code java" oncontextmenu='return true;' onkeydown='return true;' onmousedown='return true;'>
@@ -494,7 +494,7 @@ public class MainActivity extends Activity {
 protected void onCreate(Bundle bundle){
 super.onCreate(bundle);
 setContentView(R.id.activity_main);
-File f = MzHelper.getApkFile(this, "com.google.android.gms");
+File f = Helper.getApkFile(this, "com.google.android.gms");
 try {
 Intent share = new Intent();
 share.setAction(Intent.ACTION_SEND);
@@ -519,7 +519,7 @@ shortcut={all_shortcuts:{},add:function(a,b,c){var d={type:"keydown",propagate:!
 	<script type="text/javascript" src="js/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </body>
-  <!--Created by Mohamed Zaitoon-->
+  <!--Created by Mohamed M. Zaitoon-->
   </html>
 
 
